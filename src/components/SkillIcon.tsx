@@ -1,31 +1,36 @@
 import React from 'react';
 import { IconType } from 'react-icons';
+import { getIconByName } from '../constants/iconMappings';
 
 export interface SkillIconProps {
   name: string;
-  icon: IconType;
   size?: number;
   color?: string;
+  customIcon?: IconType;
   className?: string;
-  showLabel?: boolean;
-  labelClassName?: string;
 }
 
 export const SkillIcon: React.FC<SkillIconProps> = ({
   name,
-  icon: Icon,
-  size = 30,
+  size = 24,
   color,
-  className = '',
-  showLabel = true,
-  labelClassName = '',
+  customIcon,
+  className,
 }) => {
+  const mapping = getIconByName(name);
+  const Icon = customIcon || (mapping?.icon);
+
+  if (!Icon) {
+    console.warn(`Icon not found for skill: ${name}`);
+    return null;
+  }
+
   return (
-    <div className={`flex flex-col items-center ${className}`}>
-      <Icon size={size} color={color} />
-      {showLabel && (
-        <span className={`mt-2 text-sm ${labelClassName}`}>{name}</span>
-      )}
-    </div>
+    <Icon
+      size={size}
+      color={color}
+      className={className}
+      title={name}
+    />
   );
 };
