@@ -1,0 +1,42 @@
+{
+  "name": "react-skills-icons",
+  "version": "1.0.0",
+  "description": "A React component library for displaying skill icons",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "lint": "eslint src/**/*.{ts,tsx}",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "react-icons": ">=4.0.0"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "skills",
+    "portfolio"
+  ],
+  "author": "Gal Kremer",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "rollup": "^4.40.2",
+    "rollup-plugin-dts": "^6.2.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}
