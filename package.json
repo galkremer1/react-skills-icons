@@ -38,5 +38,13 @@
     "rollup-plugin-dts": "^6.2.1",
     "tslib": "^2.8.1",
     "typescript": "^5.8.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galkremer1/react-skills-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/galkremer1/react-skills-icons/issues"
+  },
+  "homepage": "https://github.com/galkremer1/react-skills-icons#readme"
 }
