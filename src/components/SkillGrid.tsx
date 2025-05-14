@@ -1,6 +1,8 @@
 import React from 'react';
 import { SkillIcon, SkillIconProps } from './SkillIcon';
 
+//TODO: under working
+
 export interface SkillGridProps {
   skills: SkillIconProps[];
   columns?: number;

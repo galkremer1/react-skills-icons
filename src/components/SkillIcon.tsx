@@ -1,12 +1,13 @@
 import React from 'react';
 import { IconType } from 'react-icons';
 import { getIconBySkill } from '../constants/iconMappings';
+import { SkillName } from '../constants/iconImports';
 
 export const TEXT_SIZES = ['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl'] as const;
 export type TextSize = typeof TEXT_SIZES[number];
 
 export interface SkillIconProps {
-  skill: string;
+  skill: SkillName | string;  // Support both specific skills and string for backward compatibility
   size?: number;
   color?: string;
   customIcon?: IconType;

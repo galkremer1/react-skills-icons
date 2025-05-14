@@ -1,201 +1,12 @@
-import {
-  SiJavascript,
-  SiTypescript,
-  SiPython,
-  SiReact,
-  SiVuedotjs,
-  SiAngular,
-  SiNodedotjs,
-  SiMongodb,
-  SiPostgresql,
-  SiMysql,
-  SiGooglecloud,
-  SiDocker,
-  SiKubernetes,
-  SiGit,
-  SiGithub,
-  SiNextdotjs,
-  SiNestjs,
-  SiExpress,
-  SiDjango,
-  SiFlask,
-  SiSpring,
-  SiRust,
-  SiGo,
-  SiCplusplus,
-  SiPhp,
-  SiSwift,
-  SiKotlin,
-  SiDart,
-  SiFlutter,
-  SiRedis,
-  SiNeo4J,
-  SiGraphql,
-  SiTailwindcss,
-  SiSass,
-  SiJest,
-  SiCypress,
-  SiSelenium,
-  SiJenkins,
-  SiCircleci,
-  SiTravisci,
-  SiElixir,
-  SiHaskell,
-  SiErlang,
-  SiLua,
-  SiPerl,
-  SiR,
-  SiScala,
-  SiClojure,
-  SiJulia,
-  SiOcaml,
-  SiFsharp,
-  SiLatex,
-  SiWebassembly,
-  SiSolidity,
-  SiAssemblyscript,
-  SiGnubash,
-  SiPowershell,
-  SiFortran,
-  SiApachegroovy,
-  SiDotnet,
-  SiDelphi,
-  SiBulma,
-  SiBootstrap,
-  SiAntdesign,
-  SiChakraui,
-  SiLess,
-  SiPostcss,
-  SiCoffeescript,
-  SiJson,
-  SiYaml,
-  SiRedux,
-  SiElectron,
-  SiFigma,
-  SiInvision,
-  SiVisualstudiocode,
-  SiWebpack,
-  SiMaterialdesign,
-} from 'react-icons/si';
+// Import everything from the iconImports file
+import * as Icons from './iconImports';
 
-import { TbBrandCSharp, TbBrandAzure } from "react-icons/tb";
-import { FaAws, FaJava } from "react-icons/fa";
 
-import {
-  DiAndroid,
-  DiAngularSimple,
-  DiApple,
-  DiAtom,
-  DiAws,
-  DiBackbone,
-  DiBootstrap,
-  DiChrome,
-  DiClojure,
-  DiCloud9,
-  DiCodeigniter,
-  DiCoda,
-  DiDart,
-  DiDebian,
-  DiDigitalOcean,
-  DiDjango,
-  DiDocker,
-  DiDreamweaver,
-  DiDropbox,
-  DiDrupal,
-  DiEclipse,
-  DiEmber,
-  DiErlang,
-  DiExtjs,
-  DiFirefox,
-  DiFsharp,
-  DiGit,
-  DiGithub,
-  DiGoogleAnalytics,
-  DiGoogleDrive,
-  DiGroovy,
-  DiGrunt,
-  DiGulp,
-  DiHaskell,
-  DiHeroku,
-  DiHtml5,
-  DiHtml53DEffects,
-  DiHtml5Connectivity,
-  DiHtml5DeviceAccess,
-  DiHtml5Multimedia,
-  DiIe,
-  DiIllustrator,
-  DiIntellij,
-  DiIonic,
-  DiJava,
-  DiJavascript,
-  DiJenkins,
-  DiJoomla,
-  DiJqueryLogo,
-  DiJsBadge,
-  DiKomodo,
-  DiKrakenjs,
-  DiLaravel,
-  DiLinux,
-  DiMagento,
-  DiMarkdown,
-  DiMaterializecss,
-  DiMeteor,
-  DiModernizr,
-  DiMongodb,
-  DiMootools,
-  DiMsqlServer,
-  DiMysql,
-  DiNetbeans,
-  DiNginx,
-  DiNodejs,
-  DiNodejsSmall,
-  DiNpm,
-  DiOnedrive,
-  DiOpenshift,
-  DiOpera,
-  DiPerl,
-  DiPhonegap,
-  DiPhotoshop,
-  DiPhp,
-  DiPostgresql,
-  DiProlog,
-  DiPython,
-  DiReact,
-  DiRedis,
-  DiRequirejs,
-  DiRuby,
-  DiRust,
-  DiSafari,
-  DiSass,
-  DiScala,
-  DiSizzlejs,
-  DiSqllite,
-  DiStylus,
-  DiSublime,
-  DiSwift,
-  DiSymfony,
-  DiTerminal,
-  DiTravis,
-  DiTypo3,
-  DiUbuntu,
-  DiUnitySmall,
-  DiVim,
-  DiVisualstudio,
-  DiWindows,
-  DiWordpress,
-  DiYii,
-  DiCss3,
-  DiCss3Full,
-  DiBower,
-  DiBrackets,
-  DiBlackberry
-} from 'react-icons/di';
-import { IconType } from 'react-icons';
 
 export interface SkillIconMapping {
-  skill: string;  
+  skill: Icons.SkillName; 
   title: string;
-  icon: IconType;
+  icon: Icons.IconType;
   category: 'programming' | 'framework' | 'database' | 'cloud' | 'tool' | 'platform';
   aliases: string[];
 }
@@ -209,28 +20,28 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'javascript',  
     title: 'JavaScript',
-    icon: SiJavascript,
+    icon: Icons.SiJavascript,
     category: 'programming',
     aliases: ['js', 'ecmascript', 'es6', 'es2015', 'vanilla-js', 'frontend-language']
   },
   {
     skill: 'typescript',
     title: 'TypeScript',
-    icon: SiTypescript,
+    icon: Icons.SiTypescript,
     category: 'programming',
     aliases: ['ts', 'typed-javascript', 'microsoft-typescript', 'static-js']
   },
   {
     skill: 'javascript1',
     title: 'JavaScript',
-    icon: DiJavascript,
+    icon: Icons.DiJavascript,
     category: 'programming',
     aliases: ['js-alt', 'ecmascript-alt', 'browser-language']
   },
   {
     skill: 'javascript-badge',
     title: 'JavaScript',
-    icon: DiJsBadge,
+    icon: Icons.DiJsBadge,
     category: 'programming',
     aliases: ['js-badge', 'javascript-icon']
   },
@@ -239,14 +50,14 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'python',
     title: 'Python',
-    icon: SiPython,
+    icon: Icons.SiPython,
     category: 'programming',
     aliases: ['py', 'python3', 'cpython', 'data-science-language']
   },
   {
     skill: 'python1',
     title: 'Python',
-    icon: DiPython,
+    icon: Icons.DiPython,
     category: 'programming',
     aliases: ['py-alt', 'python-alt', 'scripting-language']
   },
@@ -255,49 +66,49 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'java',
     title: 'Java',
-    icon: FaJava,
+    icon: Icons.FaJava,
     category: 'programming',
     aliases: ['jvm', 'oracle-java', 'openjdk', 'enterprise-language']
   },
   {
     skill: 'java1',
     title: 'Java',
-    icon: DiJava,
+    icon: Icons.DiJava,
     category: 'programming',
     aliases: ['jvm-alt', 'java-alt', 'java-programming']
   },
   {
     skill: 'kotlin',
     title: 'Kotlin',
-    icon: SiKotlin,
+    icon: Icons.SiKotlin,
     category: 'programming',
     aliases: ['android-language', 'jetbrains-kotlin', 'modern-java', 'kotlin-jvm']
   },
   {
     skill: 'scala',
     title: 'Scala',
-    icon: SiScala,
+    icon: Icons.SiScala,
     category: 'programming',
     aliases: ['scala-jvm', 'functional-jvm', 'spark-language', 'typesafe-language']
   },
   {
     skill: 'scala1',
     title: 'Scala',
-    icon: DiScala,
+    icon: Icons.DiScala,
     category: 'programming',
     aliases: ['scala-alt', 'scala-language', 'akka-language']
   },
   {
     skill: 'groovy',
     title: 'Groovy',
-    icon: SiApachegroovy,
+    icon: Icons.SiApachegroovy,
     category: 'programming',
     aliases: ['groovy-jvm', 'gradle-language', 'jenkins-language', 'scripting-jvm']
   },
   {
     skill: 'groovy1',
     title: 'Groovy',
-    icon: DiGroovy,
+    icon: Icons.DiGroovy,
     category: 'programming',
     aliases: ['groovy-alt', 'groovy-language', 'apache-groovy']
   },
@@ -306,42 +117,42 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'rust',
     title: 'Rust',
-    icon: SiRust,
+    icon: Icons.SiRust,
     category: 'programming',
     aliases: ['rs', 'rustlang', 'systems-programming', 'memory-safe']
   },
   {
     skill: 'rust1',
     title: 'Rust',
-    icon: DiRust,
+    icon: Icons.DiRust,
     category: 'programming',
     aliases: ['rs-alt', 'rust-alt', 'mozilla-rust']
   },
   {
     skill: 'go',
     title: 'Go',
-    icon: SiGo,
+    icon: Icons.SiGo,
     category: 'programming',
     aliases: ['golang', 'google-go', 'go-lang', 'concurrent-language']
   },
   {
     skill: 'cpp',
     title: 'C++',
-    icon: SiCplusplus,
+    icon: Icons.SiCplusplus,
     category: 'programming',
     aliases: ['c++', 'cpp', 'cplusplus', 'systems-language', 'game-development']
   },
   {
     skill: 'csharp',
     title: 'C#',
-    icon: TbBrandCSharp,
+    icon: Icons.TbBrandCSharp,
     category: 'programming',
     aliases: ['c#', 'dotnet', 'csharp', 'microsoft-csharp', 'unity-language']
   },
   {
     skill: 'assembly',
     title: 'Assembly',
-    icon: SiAssemblyscript,
+    icon: Icons.SiAssemblyscript,
     category: 'programming',
     aliases: ['asm', 'assembler', 'low-level', 'machine-code']
   },
@@ -350,35 +161,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'php',
     title: 'PHP',
-    icon: SiPhp,
+    icon: Icons.SiPhp,
     category: 'programming',
     aliases: ['php-language', 'server-language', 'web-backend', 'php-development']
   },
   {
     skill: 'php1',
     title: 'PHP',
-    icon: DiPhp,
+    icon: Icons.DiPhp,
     category: 'programming',
     aliases: ['php-alt', 'php-language', 'web-scripting']
   },
   {
     skill: 'html',
     title: 'HTML',
-    icon: DiHtml5,
+    icon: Icons.DiHtml5,
     category: 'programming',
     aliases: ['html5', 'markup', 'web-markup', 'hypertext-markup']
   },
   {
     skill: 'css',
     title: 'CSS',
-    icon: DiCss3,
+    icon: Icons.DiCss3,
     category: 'programming',
     aliases: ['css3', 'styles', 'web-styles', 'cascading-style-sheets']
   },
   {
     skill: 'css3-full',
     title: 'CSS3',
-    icon: DiCss3Full,
+    icon: Icons.DiCss3Full,
     category: 'programming',
     aliases: ['css-full', 'css3-logo', 'css-styling']
   },
@@ -387,28 +198,28 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'swift',
     title: 'Swift',
-    icon: SiSwift,
+    icon: Icons.SiSwift,
     category: 'programming',
     aliases: ['ios', 'apple-language', 'ios-development', 'macos-development']
   },
   {
     skill: 'swift1',
     title: 'Swift',
-    icon: DiSwift,
+    icon: Icons.DiSwift,
     category: 'programming',
     aliases: ['swift-alt', 'apple-language', 'apple-swift']
   },
   {
     skill: 'dart',
     title: 'Dart',
-    icon: SiDart,
+    icon: Icons.SiDart,
     category: 'programming',
     aliases: ['flutter-lang', 'google-dart', 'flutter-language', 'cross-platform-language']
   },
   {
     skill: 'dart1',
     title: 'Dart',
-    icon: DiDart,
+    icon: Icons.DiDart,
     category: 'programming',
     aliases: ['dart-alt', 'flutter-language-alt', 'dart-vm']
   },  
@@ -416,35 +227,36 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'ruby',
     title: 'Ruby',
-    icon: DiRuby,
+    icon: Icons.DiRuby,
     category: 'programming',
-    aliases: ['rb', 'rails', 'ruby-language', 'ruby-on-rails', 'scripting']
+    aliases: ['rb', 'rails', 'ruby-language', 'ruby-on-rails', 'scripting'
+    ]
   },
   {
     skill: 'perl',
     title: 'Perl',
-    icon: SiPerl,
+    icon: Icons.SiPerl,
     category: 'programming',
     aliases: ['pl', 'text-processing', 'perl-scripting', 'system-admin']
   },
   {
     skill: 'perl1',
     title: 'Perl',
-    icon: DiPerl,
+    icon: Icons.DiPerl,
     category: 'programming',
     aliases: ['perl-alt', 'pl-alt', 'practical-extraction']
   },
   {
     skill: 'bash',
     title: 'Bash',
-    icon: SiGnubash,
+    icon: Icons.SiGnubash,
     category: 'programming',
     aliases: ['shell', 'shell-scripting', 'unix-shell', 'command-line']
   },
   {
     skill: 'powershell',
     title: 'PowerShell',
-    icon: SiPowershell,
+    icon: Icons.SiPowershell,
     category: 'programming',
     aliases: ['ps', 'microsoft-powershell', 'windows-scripting', 'automation']
   },
@@ -453,70 +265,70 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'elixir',
     title: 'Elixir',
-    icon: SiElixir,
+    icon: Icons.SiElixir,
     category: 'programming',
     aliases: ['ex', 'exs', 'erlang-vm', 'phoenix-framework', 'functional']
   },
   {
     skill: 'haskell',
     title: 'Haskell',
-    icon: SiHaskell,
+    icon: Icons.SiHaskell,
     category: 'programming',
     aliases: ['hs', 'purely-functional', 'haskell-language', 'advanced-functional']
   },
   {
     skill: 'haskell1',
     title: 'Haskell',
-    icon: DiHaskell,
+    icon: Icons.DiHaskell,
     category: 'programming',
     aliases: ['hs-alt', 'haskell-alt', 'haskell-logo']
   },
   {
     skill: 'erlang',
     title: 'Erlang',
-    icon: SiErlang,
+    icon: Icons.SiErlang,
     category: 'programming',
     aliases: ['erl', 'concurrent-programming', 'telecom', 'fault-tolerant']
   },
   {
     skill: 'erlang1',
     title: 'Erlang',
-    icon: DiErlang,
+    icon: Icons.DiErlang,
     category: 'programming',
     aliases: ['erl-alt', 'erlang-alt', 'beam-vm']
   },
   {
     skill: 'clojure',
     title: 'Clojure',
-    icon: SiClojure,
+    icon: Icons.SiClojure,
     category: 'programming',
     aliases: ['clj', 'lisp-dialect', 'jvm-lisp', 'functional-jvm']
   },
   {
     skill: 'clojure1',
     title: 'Clojure',
-    icon: DiClojure,
+    icon: Icons.DiClojure,
     category: 'programming',
     aliases: ['clj-alt', 'clojurescript', 'clojure-alt']
   },
   {
     skill: 'fsharp',
     title: 'F#',
-    icon: SiFsharp,
+    icon: Icons.SiFsharp,
     category: 'programming',
     aliases: ['fs', 'dotnet-functional', 'microsoft-fsharp', 'ml-family']
   },
   {
     skill: 'fsharp1',
     title: 'F#',
-    icon: DiFsharp,
+    icon: Icons.DiFsharp,
     category: 'programming',
     aliases: ['fs-alt', 'functional-dotnet', 'fsharp-alt']
   },
   {
     skill: 'ocaml',
     title: 'OCaml',
-    icon: SiOcaml,
+    icon: Icons.SiOcaml,
     category: 'programming',
     aliases: ['ml', 'ocaml-language', 'functional-systems', 'ml-family']
   },
@@ -525,21 +337,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'r',
     title: 'R',
-    icon: SiR,
+    icon: Icons.SiR,
     category: 'programming',
     aliases: ['rlang', 'statistics', 'data-analysis', 'data-science']
   },
   {
     skill: 'julia',
     title: 'Julia',
-    icon: SiJulia,
+    icon: Icons.SiJulia,
     category: 'programming',
     aliases: ['jl', 'scientific-computing', 'numerical-analysis', 'technical-computing']
   },
   {
     skill: 'fortran',
     title: 'Fortran',
-    icon: SiFortran,
+    icon: Icons.SiFortran,
     category: 'programming',
     aliases: ['scientific-computing', 'numerical', 'hpc', 'high-performance']
   },
@@ -548,28 +360,28 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'latex',
     title: 'LaTeX',
-    icon: SiLatex,
+    icon: Icons.SiLatex,
     category: 'programming',
     aliases: ['tex', 'document-preparation', 'typesetting', 'academic-writing']
   },
   {
     skill: 'markdown',
     title: 'Markdown',
-    icon: DiMarkdown,
+    icon: Icons.DiMarkdown,
     category: 'tool',
     aliases: ['md', 'markdown-syntax', 'lightweight-markup', 'documentation']
   },
   {
     skill: 'json',
     title: 'JSON',
-    icon: SiJson,
+    icon: Icons.SiJson,
     category: 'programming',
     aliases: ['javascript-object-notation', 'data-format', 'data-interchange', 'web-data']
   },
   {
     skill: 'yaml',
     title: 'YAML',
-    icon: SiYaml,
+    icon: Icons.SiYaml,
     category: 'programming',
     aliases: ['yml', 'config-format', 'data-serialization', 'human-readable']
   },
@@ -578,49 +390,49 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'wasm',
     title: 'WebAssembly',
-    icon: SiWebassembly,
+    icon: Icons.SiWebassembly,
     category: 'programming',
     aliases: ['webassembly', 'wasm-binary', 'browser-binary', 'web-performance']
   },
   {
     skill: 'solidity',
     title: 'Solidity',
-    icon: SiSolidity,
+    icon: Icons.SiSolidity,
     category: 'programming',
     aliases: ['sol', 'ethereum', 'smart-contracts', 'blockchain', 'web3']
   },
   {
     skill: 'lua',
     title: 'Lua',
-    icon: SiLua,
+    icon: Icons.SiLua,
     category: 'programming',
     aliases: ['embedded-scripting', 'game-scripting', 'lightweight-language', 'embeddable']
   },
   {
     skill: 'prolog',
     title: 'Prolog',
-    icon: DiProlog,
+    icon: Icons.DiProlog,
     category: 'programming',
     aliases: ['pl', 'logic-programming', 'ai-language', 'declarative']
   },
   {
     skill: 'coffeescript',
     title: 'CoffeeScript',
-    icon: SiCoffeescript,
+    icon: Icons.SiCoffeescript,
     category: 'programming',
     aliases: ['coffee', 'javascript-transpiler', 'js-alternative', 'clean-syntax']
   },
   {
     skill: 'vbnet',
     title: 'VB.NET',
-    icon: SiDotnet,
+    icon: Icons.SiDotnet,
     category: 'programming',
     aliases: ['visualbasic', 'visual-basic', 'vb', 'microsoft-basic']
   },
   {
     skill: 'delphi',
     title: 'Delphi',
-    icon: SiDelphi,
+    icon: Icons.SiDelphi,
     category: 'programming',
     aliases: ['object-pascal', 'pascal', 'rad-tool', 'windows-development']
   },
@@ -633,21 +445,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'react',
     title: 'React',
-    icon: SiReact,
+    icon: Icons.SiReact,
     category: 'framework',
     aliases: ['reactjs', 'react.js', 'react-dom', 'facebook-react', 'ui-library']
   },
   {
     skill: 'react1',
     title: 'React',
-    icon: DiReact,
+    icon: Icons.DiReact,
     category: 'framework',
     aliases: ['reactjs-alt', 'react-alt', 'react-library']
   },
   {
     skill: 'redux',
     title: 'Redux',
-    icon: SiRedux,
+    icon: Icons.SiRedux,
     category: 'framework',
     aliases: ['react-redux', 'state-management', 'flux-pattern', 'store'
     ]
@@ -655,7 +467,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'next',
     title: 'Next.js',
-    icon: SiNextdotjs,
+    icon: Icons.SiNextdotjs,
     category: 'framework',
     aliases: ['nextjs', 'next.js', 'react-framework', 'ssr-react', 'vercel']
   },
@@ -664,7 +476,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'vue',
     title: 'Vue.js',
-    icon: SiVuedotjs,
+    icon: Icons.SiVuedotjs,
     category: 'framework',
     aliases: ['vuejs', 'vue.js', 'vue-framework', 'progressive-framework', 'evan-you']
   },
@@ -673,14 +485,14 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'angular',
     title: 'Angular',
-    icon: SiAngular,
+    icon: Icons.SiAngular,
     category: 'framework',
     aliases: ['ng', 'angular2+', 'google-angular', 'typescript-framework', 'spa-framework']
   },
   {
     skill: 'angular1',
     title: 'Angular',
-    icon: DiAngularSimple,
+    icon: Icons.DiAngularSimple,
     category: 'framework',
     aliases: ['ng-alt', 'angularjs', 'angular-alt']
   },
@@ -689,21 +501,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'materialui',
     title: 'Material-UI',
-    icon: SiMaterialdesign,
+    icon: Icons.SiMaterialdesign,
     category: 'framework',
     aliases: ['mui', 'material-design', 'react-components', 'ui-library']
   },
   {
     skill: 'antdesign',
     title: 'Ant Design',
-    icon: SiAntdesign,
+    icon: Icons.SiAntdesign,
     category: 'framework',
     aliases: ['antd', 'ant-design', 'alibaba-design', 'react-ui']
   },
   {
     skill: 'chakraui',
     title: 'Chakra UI',
-    icon: SiChakraui,
+    icon: Icons.SiChakraui,
     category: 'framework',
     aliases: ['chakra', 'react-chakra', 'accessible-ui', 'modern-components']
   },
@@ -712,35 +524,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'tailwind',
     title: 'Tailwind CSS',
-    icon: SiTailwindcss,
+    icon: Icons.SiTailwindcss,
     category: 'framework',
     aliases: ['tailwindcss', 'utility-css', 'atomic-css', 'utility-first', 'tailwind css']
   },
   {
     skill: 'bootstrap',
     title: 'Bootstrap',
-    icon: SiBootstrap,
+    icon: Icons.SiBootstrap,
     category: 'framework',
     aliases: ['twitter-bootstrap', 'responsive-framework', 'css-framework', 'ui-toolkit']
   },
   {
     skill: 'bootstrap1',
     title: 'Bootstrap',
-    icon: DiBootstrap,
+    icon: Icons.DiBootstrap,
     category: 'framework',
     aliases: ['bootstrap-alt', 'bootstrap-framework', 'responsive-design']
   },
   {
     skill: 'bulma',
     title: 'Bulma',
-    icon: SiBulma,
+    icon: Icons.SiBulma,
     category: 'framework',
     aliases: ['bulma-css', 'flexbox-framework', 'modern-css', 'lightweight-framework']
   },
   {
     skill: 'materialize',
     title: 'Materialize CSS',
-    icon: DiMaterializecss,
+    icon: Icons.DiMaterializecss,
     category: 'framework',
     aliases: ['materializecss', 'material-design-css', 'responsive-materialize']
   },
@@ -749,35 +561,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'sass',
     title: 'Sass',
-    icon: SiSass,
+    icon: Icons.SiSass,
     category: 'tool',
     aliases: ['scss', 'css-preprocessor', 'sass-lang', 'advanced-css']
   },
   {
     skill: 'sass1',
     title: 'Sass',
-    icon: DiSass,
+    icon: Icons.DiSass,
     category: 'tool',
     aliases: ['scss-alt', 'sass-preprocessor', 'css-extension']
   },
   {
     skill: 'less',
     title: 'Less',
-    icon: SiLess,
+    icon: Icons.SiLess,
     category: 'tool',
     aliases: ['lesscss', 'css-preprocessor', 'dynamic-css', 'stylesheet-language']
   },
   {
     skill: 'stylus',
     title: 'Stylus',
-    icon: DiStylus,
+    icon: Icons.DiStylus,
     category: 'tool',
     aliases: ['css-preprocessor', 'stylus-lang', 'expressive-css', 'indented-css']
   },
   {
     skill: 'postcss',
     title: 'PostCSS',
-    icon: SiPostcss,
+    icon: Icons.SiPostcss,
     category: 'tool',
     aliases: ['css-postprocessor', 'css-transformation', 'autoprefixer', 'modern-css-tools']
   },
@@ -786,42 +598,42 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'jquery',
     title: 'jQuery',
-    icon: DiJqueryLogo,
+    icon: Icons.DiJqueryLogo,
     category: 'framework',
     aliases: ['js-library', 'dom-manipulation', 'legacy-js', 'cross-browser']
   },
   {
     skill: 'backbone',
     title: 'Backbone.js',
-    icon: DiBackbone,
+    icon: Icons.DiBackbone,
     category: 'framework',
     aliases: ['backbonejs', 'mvc-framework', 'spa-library', 'lightweight-framework']
   },
   {
     skill: 'ember',
     title: 'Ember.js',
-    icon: DiEmber,
+    icon: Icons.DiEmber,
     category: 'framework',
     aliases: ['emberjs', 'ember-framework', 'ambitious-web-apps', 'convention-over-configuration']
   },
   {
     skill: 'mootools',
     title: 'MooTools',
-    icon: DiMootools,
+    icon: Icons.DiMootools,
     category: 'framework',
     aliases: ['javascript-framework', 'modular-js', 'legacy-framework', 'oop-js']
   },
   {
     skill: 'sizzlejs',
     title: 'SizzleJS',
-    icon: DiSizzlejs,
+    icon: Icons.DiSizzlejs,
     category: 'framework',
     aliases: ['sizzle', 'css-selector-engine', 'jquery-core', 'dom-selector']
   },
   {
     skill: 'extjs',
     title: 'ExtJS',
-    icon: DiExtjs,
+    icon: Icons.DiExtjs,
     category: 'framework',
     aliases: ['sencha', 'enterprise-web-apps', 'rich-internet-applications', 'desktop-like-web']
   },
@@ -834,35 +646,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'nodejs',
     title: 'Node.js',
-    icon: SiNodedotjs,
+    icon: Icons.SiNodedotjs,
     category: 'framework',
     aliases: ['node', 'nodejs', 'server-javascript', 'javascript-runtime', 'v8-runtime', 'node.js']
   },
   {
     skill: 'nodejs1',
     title: 'Node.js',
-    icon: DiNodejs,
+    icon: Icons.DiNodejs,
     category: 'framework',
     aliases: ['node-alt', 'server-js', 'node-runtime', 'js-backend']
   },
   {
     skill: 'nodejs-small',
     title: 'Node.js',
-    icon: DiNodejsSmall,
+    icon: Icons.DiNodejsSmall,
     category: 'framework',
     aliases: ['node-small', 'nodejs-icon', 'node-server']
   },
   {
     skill: 'express',
     title: 'Express.js',
-    icon: SiExpress,
+    icon: Icons.SiExpress,
     category: 'framework',
     aliases: ['expressjs', 'node-web-framework', 'minimalist-framework', 'web-server-framework']
   },
   {
     skill: 'nest',
     title: 'NestJS',
-    icon: SiNestjs,
+    icon: Icons.SiNestjs,
     category: 'framework',
     aliases: ['nestjs', 'typescript-framework', 'angular-inspired', 'node-enterprise-framework']
   },
@@ -871,21 +683,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'django',
     title: 'Django',
-    icon: SiDjango,
+    icon: Icons.SiDjango,
     category: 'framework',
     aliases: ['py-web', 'python-web-framework', 'batteries-included', 'orm-framework']
   },
   {
     skill: 'django1',
     title: 'Django',
-    icon: DiDjango,
+    icon: Icons.DiDjango,
     category: 'framework',
     aliases: ['django-alt', 'python-mvc', 'full-stack-python']
   },
   {
     skill: 'flask',
     title: 'Flask',
-    icon: SiFlask,
+    icon: Icons.SiFlask,
     category: 'framework',
     aliases: ['python-microframework', 'lightweight-python', 'wsgi-framework', 'minimalist-web']
   },
@@ -894,21 +706,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'laravel',
     title: 'Laravel',
-    icon: DiLaravel,
+    icon: Icons.DiLaravel,
     category: 'framework',
     aliases: ['php-framework', 'modern-php', 'eloquent-orm', 'blade-templates']
   },
   {
     skill: 'symfony',
     title: 'Symfony',
-    icon: DiSymfony,
+    icon: Icons.DiSymfony,
     category: 'framework',
     aliases: ['php-components', 'enterprise-php', 'modular-framework', 'high-performance']
   },
   {
     skill: 'codeigniter',
     title: 'CodeIgniter',
-    icon: DiCodeigniter,
+    icon: Icons.DiCodeigniter,
     category: 'framework',
     aliases: ['php-mvc', 'lightweight-php', 'small-footprint', 'rapid-development']
   },
@@ -917,7 +729,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'spring',
     title: 'Spring',
-    icon: SiSpring,
+    icon: Icons.SiSpring,
     category: 'framework',
     aliases: ['spring-boot', 'java-framework', 'enterprise-java', 'dependency-injection', 'spring-ecosystem']
   },
@@ -926,14 +738,14 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'flutter',
     title: 'Flutter',
-    icon: SiFlutter,
+    icon: Icons.SiFlutter,
     category: 'framework',
     aliases: ['flutter-framework', 'mobile', 'cross-platform-ui', 'google-flutter', 'dart-ui']
   },
   {
     skill: 'ionic',
     title: 'Ionic Framework',
-    icon: DiIonic,
+    icon: Icons.DiIonic,
     category: 'framework',
     aliases: ['ionic-framework', 'mobile', 'hybrid-mobile', 'cross-platform-mobile', 'angular-mobile']
   },
@@ -942,7 +754,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'electron',
     title: 'Electron',
-    icon: SiElectron,
+    icon: Icons.SiElectron,
     category: 'framework',
     aliases: ['electron-js', 'desktop-apps', 'cross-platform-desktop', 'js-desktop', 'chromium-apps']
   },
@@ -951,35 +763,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'wordpress',
     title: 'WordPress',
-    icon: DiWordpress,
+    icon: Icons.DiWordpress,
     category: 'framework',
     aliases: ['wp', 'cms', 'blogging-platform', 'content-management', 'php-cms']
   },
   {
     skill: 'drupal',
     title: 'Drupal',
-    icon: DiDrupal,
+    icon: Icons.DiDrupal,
     category: 'framework',
     aliases: ['cms', 'enterprise-cms', 'content-framework', 'php-cms']
   },
   {
     skill: 'joomla',
     title: 'Joomla',
-    icon: DiJoomla,
+    icon: Icons.DiJoomla,
     category: 'framework',
     aliases: ['cms', 'content-management', 'php-cms', 'website-framework']
   },
   {
     skill: 'magento',
     title: 'Magento',
-    icon: DiMagento,
+    icon: Icons.DiMagento,
     category: 'framework',
     aliases: ['e-commerce', 'online-store', 'php-ecommerce', 'adobe-commerce']
   },
   {
     skill: 'typo3',
     title: 'TYPO3',
-    icon: DiTypo3,
+    icon: Icons.DiTypo3,
     category: 'framework',
     aliases: ['cms', 'enterprise-cms', 'german-cms', 'content-management-system']
   },
@@ -992,42 +804,42 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'postgresql',
     title: 'PostgreSQL',
-    icon: SiPostgresql,
+    icon: Icons.SiPostgresql,
     category: 'database',
     aliases: ['postgres', 'relational-db', 'sql-database', 'advanced-sql', 'open-source-db']
   },
   {
     skill: 'postgresql1',
     title: 'PostgreSQL',
-    icon: DiPostgresql,
+    icon: Icons.DiPostgresql,
     category: 'database',
     aliases: ['postgres-alt', 'pg', 'pgsql', 'enterprise-database']
   },
   {
     skill: 'mysql',
     title: 'MySQL',
-    icon: SiMysql,
+    icon: Icons.SiMysql,
     category: 'database',
     aliases: ['sql', 'relational-database', 'oracle-mysql', 'rdbms']
   },
   {
     skill: 'mysql1',
     title: 'MySQL',
-    icon: DiMysql,
+    icon: Icons.DiMysql,
     category: 'database',
     aliases: ['mysql-alt', 'my-sql', 'sql-db']
   },
   {
     skill: 'mssql',
     title: 'Microsoft SQL Server',
-    icon: DiMsqlServer,
+    icon: Icons.DiMsqlServer,
     category: 'database',
     aliases: ['sql-server', 'tsql', 'microsoft-database', 'enterprise-sql']
   },
   {
     skill: 'sqlite',
     title: 'SQLite',
-    icon: DiSqllite,
+    icon: Icons.DiSqllite,
     category: 'database',
     aliases: ['embedded-database', 'file-database', 'lightweight-sql', 'mobile-database']
   },
@@ -1036,35 +848,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'mongodb',
     title: 'MongoDB',
-    icon: SiMongodb,
+    icon: Icons.SiMongodb,
     category: 'database',
     aliases: ['mongo', 'document-database', 'nosql', 'json-database']
   },
   {
     skill: 'mongodb1',
     title: 'MongoDB',
-    icon: DiMongodb,
+    icon: Icons.DiMongodb,
     category: 'database',
     aliases: ['mongo-alt', 'document-db', 'nosql-database']
   },
   {
     skill: 'redis',
     title: 'Redis',
-    icon: SiRedis,
+    icon: Icons.SiRedis,
     category: 'database',
     aliases: ['cache', 'in-memory-db', 'key-value-store', 'data-structure-store']
   },
   {
     skill: 'redis1',
     title: 'Redis',
-    icon: DiRedis,
+    icon: Icons.DiRedis,
     category: 'database',
     aliases: ['cache-alt', 'in-memory', 'fast-database']
   },
   {
     skill: 'neo4j',
     title: 'Neo4j',
-    icon: SiNeo4J,
+    icon: Icons.SiNeo4J,
     category: 'database',
     aliases: ['graph-db', 'graph-database', 'cypher-query', 'relationship-database']
   },
@@ -1073,7 +885,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'graphql',
     title: 'GraphQL',
-    icon: SiGraphql,
+    icon: Icons.SiGraphql,
     category: 'database',
     aliases: ['gql', 'query-language', 'api-query', 'facebook-graphql', 'data-fetching']
   },
@@ -1086,49 +898,49 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'aws',
     title: 'AWS',
-    icon: FaAws,
+    icon: Icons.FaAws,
     category: 'cloud',
     aliases: ['amazon', 'amazon-web-services', 'cloud-provider', 'aws-cloud']
   },
   {
     skill: 'aws1',
     title: 'AWS',
-    icon: DiAws,
+    icon: Icons.DiAws,
     category: 'cloud',
     aliases: ['amazon-web-services-alt', 'aws-alt', 'amazon-cloud']
   },
   {
     skill: 'gcp',
     title: 'Google Cloud',
-    icon: SiGooglecloud,
+    icon: Icons.SiGooglecloud,
     category: 'cloud',
     aliases: ['google-cloud', 'gcp', 'google-cloud-platform', 'cloud-provider']
   },
   {
     skill: 'azure',
     title: 'Azure',
-    icon: TbBrandAzure,
+    icon: Icons.TbBrandAzure,
     category: 'cloud',
     aliases: ['microsoft-azure', 'azure-cloud', 'ms-cloud', 'cloud-provider']
   },
   {
     skill: 'heroku',
     title: 'Heroku',
-    icon: DiHeroku,
+    icon: Icons.DiHeroku,
     category: 'cloud',
     aliases: ['paas', 'salesforce-heroku', 'cloud-platform', 'app-hosting']
   },
   {
     skill: 'digitalocean',
     title: 'DigitalOcean',
-    icon: DiDigitalOcean,
+    icon: Icons.DiDigitalOcean,
     category: 'cloud',
     aliases: ['do', 'vps-provider', 'cloud-hosting', 'droplets']
   },
   {
     skill: 'openshift',
     title: 'OpenShift',
-    icon: DiOpenshift,
+    icon: Icons.DiOpenshift,
     category: 'cloud',
     aliases: ['redhat-openshift', 'kubernetes-platform', 'enterprise-kubernetes', 'container-platform']
   },
@@ -1137,21 +949,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'docker',
     title: 'Docker',
-    icon: SiDocker,
+    icon: Icons.SiDocker,
     category: 'tool',
     aliases: ['container', 'containerization', 'container-platform', 'virtualization']
   },
   {
     skill: 'docker1',
     title: 'Docker',
-    icon: DiDocker,
+    icon: Icons.DiDocker,
     category: 'tool',
     aliases: ['container-alt', 'docker-containers', 'docker-platform']
   },
   {
     skill: 'kubernetes',
     title: 'Kubernetes',
-    icon: SiKubernetes,
+    icon: Icons.SiKubernetes,
     category: 'tool',
     aliases: ['k8s', 'container-orchestration', 'container-management', 'cloud-native']
   },
@@ -1160,35 +972,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'jenkins',
     title: 'Jenkins',
-    icon: SiJenkins,
+    icon: Icons.SiJenkins,
     category: 'tool',
     aliases: ['ci', 'continuous-integration', 'build-automation', 'cd-pipeline']
   },
   {
     skill: 'jenkins1',
     title: 'Jenkins',
-    icon: DiJenkins,
+    icon: Icons.DiJenkins,
     category: 'tool',
     aliases: ['jenkins-alt', 'ci-server', 'automation-server']
   },
   {
     skill: 'circleci',
     title: 'CircleCI',
-    icon: SiCircleci,
+    icon: Icons.SiCircleci,
     category: 'tool',
     aliases: ['ci', 'continuous-delivery', 'cloud-ci', 'automated-testing']
   },
   {
     skill: 'travis',
     title: 'Travis CI',
-    icon: SiTravisci,
+    icon: Icons.SiTravisci,
     category: 'tool',
     aliases: ['ci', 'github-ci', 'continuous-testing', 'open-source-ci']
   },
   {
     skill: 'travis1',
     title: 'Travis CI',
-    icon: DiTravis,
+    icon: Icons.DiTravis,
     category: 'tool',
     aliases: ['ci-alt', 'travis-alt', 'build-system']
   },
@@ -1201,28 +1013,28 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'git',
     title: 'Git',
-    icon: SiGit,
+    icon: Icons.SiGit,
     category: 'tool',
     aliases: ['vcs', 'version-control', 'source-control', 'distributed-vcs']
   },
   {
     skill: 'git1',
     title: 'Git',
-    icon: DiGit,
+    icon: Icons.DiGit,
     category: 'tool',
     aliases: ['vcs-alt', 'source-management', 'git-scm']
   },
   {
     skill: 'github',
     title: 'GitHub',
-    icon: SiGithub,
+    icon: Icons.SiGithub,
     category: 'platform',
     aliases: ['code-hosting', 'git-platform', 'microsoft-github', 'project-management']
   },
   {
     skill: 'github1',
     title: 'GitHub',
-    icon: DiGithub,
+    icon: Icons.DiGithub,
     category: 'platform',
     aliases: ['github-alt', 'git-hosting', 'code-collaboration']
   },
@@ -1231,14 +1043,14 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'npm',
     title: 'npm',
-    icon: DiNpm,
+    icon: Icons.DiNpm,
     category: 'tool',
     aliases: ['node-package-manager', 'javascript-packages', 'package-registry', 'dependency-manager']
   },
   {
     skill: 'bower',
     title: 'Bower',
-    icon: DiBower,
+    icon: Icons.DiBower,
     category: 'tool',
     aliases: ['package-manager', 'frontend-packages', 'web-package-manager', 'legacy-dependency']
   },
@@ -1247,21 +1059,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'grunt',
     title: 'Grunt',
-    icon: DiGrunt,
+    icon: Icons.DiGrunt,
     category: 'tool',
     aliases: ['task-runner', 'javascript-automation', 'build-tool', 'task-automation']
   },
   {
     skill: 'gulp',
     title: 'Gulp',
-    icon: DiGulp,
+    icon: Icons.DiGulp,
     category: 'tool',
     aliases: ['task-runner', 'streaming-build', 'automation-toolkit', 'js-task-runner']
   },
   {
     skill: 'webpack',
     title: 'Webpack',
-    icon: SiWebpack,
+    icon: Icons.SiWebpack,
     category: 'tool',
     aliases: ['module-bundler', 'asset-bundler', 'js-bundler', 'build-tool']
   },
@@ -1270,21 +1082,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'jest',
     title: 'Jest',
-    icon: SiJest,
+    icon: Icons.SiJest,
     category: 'tool',
     aliases: ['testing', 'javascript-testing', 'react-testing', 'test-framework']
   },
   {
     skill: 'cypress',
     title: 'Cypress',
-    icon: SiCypress,
+    icon: Icons.SiCypress,
     category: 'tool',
     aliases: ['e2e', 'end-to-end-testing', 'frontend-testing', 'browser-testing']
   },
   {
     skill: 'selenium',
     title: 'Selenium',
-    icon: SiSelenium,
+    icon: Icons.SiSelenium,
     category: 'tool',
     aliases: ['webdriver', 'browser-automation', 'ui-testing', 'automated-testing']
   },
@@ -1293,7 +1105,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'nginx',
     title: 'Nginx',
-    icon: DiNginx,
+    icon: Icons.DiNginx,
     category: 'tool',
     aliases: ['web-server', 'proxy', 'load-balancer', 'reverse-proxy', 'high-performance-server']
   },
@@ -1302,84 +1114,84 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'intellij',
     title: 'IntelliJ IDEA',
-    icon: DiIntellij,
+    icon: Icons.DiIntellij,
     category: 'tool',
     aliases: ['idea', 'jetbrains-ide', 'java-ide', 'integrated-development']
   },
   {
     skill: 'vscode',
     title: 'Visual Studio Code',
-    icon: SiVisualstudiocode,
+    icon: Icons.SiVisualstudiocode,
     category: 'tool',
     aliases: ['vs-code', 'code-editor', 'microsoft-editor', 'javascript-editor']
   },
   {
     skill: 'visualstudio',
     title: 'Visual Studio',
-    icon: DiVisualstudio,
+    icon: Icons.DiVisualstudio,
     category: 'tool',
     aliases: ['vs', 'microsoft-ide', 'dotnet-ide', 'windows-development']
   },
   {
     skill: 'atom',
     title: 'Atom',
-    icon: DiAtom,
+    icon: Icons.DiAtom,
     category: 'tool',
     aliases: ['atom-editor', 'github-editor', 'hackable-editor', 'electron-editor']
   },
   {
     skill: 'sublime',
     title: 'Sublime Text',
-    icon: DiSublime,
+    icon: Icons.DiSublime,
     category: 'tool',
     aliases: ['text-editor', 'code-editor', 'fast-editor', 'cross-platform-editor']
   },
   {
     skill: 'vim',
     title: 'Vim',
-    icon: DiVim,
+    icon: Icons.DiVim,
     category: 'tool',
     aliases: ['neovim', 'text-editor', 'terminal-editor', 'modal-editor']
   },
   {
     skill: 'eclipse',
     title: 'Eclipse',
-    icon: DiEclipse,
+    icon: Icons.DiEclipse,
     category: 'tool',
     aliases: ['eclipse-ide', 'java-ide', 'open-source-ide', 'plugin-platform']
   },
   {
     skill: 'netbeans',
     title: 'NetBeans',
-    icon: DiNetbeans,
+    icon: Icons.DiNetbeans,
     category: 'tool',
     aliases: ['java-ide', 'apache-netbeans', 'cross-platform-ide', 'multi-language-ide']
   },
   {
     skill: 'dreamweaver',
     title: 'Dreamweaver',
-    icon: DiDreamweaver,
+    icon: Icons.DiDreamweaver,
     category: 'tool',
     aliases: ['adobe-dreamweaver', 'web-editor', 'visual-editor', 'wysiwyg-editor']
   },
   {
     skill: 'komodo',
     title: 'Komodo IDE',
-    icon: DiKomodo,
+    icon: Icons.DiKomodo,
     category: 'tool',
     aliases: ['activestate', 'python-ide', 'multi-language-ide', 'scripting-ide']
   },
   {
     skill: 'coda',
     title: 'Coda',
-    icon: DiCoda,
+    icon: Icons.DiCoda,
     category: 'tool',
     aliases: ['panic', 'mac-editor', 'web-development-tool', 'all-in-one-editor']
   },
   {
     skill: 'brackets',
     title: 'Brackets',
-    icon: DiBrackets,
+    icon: Icons.DiBrackets,
     category: 'tool',
     aliases: ['adobe-brackets', 'web-editor', 'frontend-editor', 'open-source-editor']
   },
@@ -1388,28 +1200,28 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'figma',
     title: 'Figma',
-    icon: SiFigma,
+    icon: Icons.SiFigma,
     category: 'tool',
     aliases: ['ui-design', 'interface-design', 'collaborative-design', 'web-design']
   },
   {
     skill: 'invision',
     title: 'InVision',
-    icon: SiInvision,
+    icon: Icons.SiInvision,
     category: 'tool',
     aliases: ['prototyping', 'design-collaboration', 'ui-prototyping', 'design-workflow']
   },
   {
     skill: 'illustrator',
     title: 'Adobe Illustrator',
-    icon: DiIllustrator,
+    icon: Icons.DiIllustrator,
     category: 'tool',
     aliases: ['ai', 'vector-graphics', 'adobe-suite', 'graphic-design']
   },
   {
     skill: 'photoshop',
     title: 'Adobe Photoshop',
-    icon: DiPhotoshop,
+    icon: Icons.DiPhotoshop,
     category: 'tool',
     aliases: ['ps', 'image-editing', 'adobe-suite', 'raster-graphics']
   },
@@ -1418,7 +1230,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'phonegap',
     title: 'PhoneGap',
-    icon: DiPhonegap,
+    icon: Icons.DiPhonegap,
     category: 'tool',
     aliases: ['cordova', 'apache-cordova', 'hybrid-mobile', 'cross-platform-mobile']
   },
@@ -1431,35 +1243,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'linux',
     title: 'Linux',
-    icon: DiLinux,
+    icon: Icons.DiLinux,
     category: 'platform',
     aliases: ['gnu-linux', 'open-source-os', 'unix-like', 'linux-kernel']
   },
   {
     skill: 'ubuntu',
     title: 'Ubuntu',
-    icon: DiUbuntu,
+    icon: Icons.DiUbuntu,
     category: 'platform',
     aliases: ['debian-based', 'linux-distribution', 'canonical', 'open-source-os']
   },
   {
     skill: 'debian',
     title: 'Debian',
-    icon: DiDebian,
+    icon: Icons.DiDebian,
     category: 'platform',
     aliases: ['linux-distro', 'package-management', 'apt', 'stable-linux']
   },
   {
     skill: 'windows',
     title: 'Windows',
-    icon: DiWindows,
+    icon: Icons.DiWindows,
     category: 'platform',
     aliases: ['microsoft-windows', 'win10', 'win11', 'desktop-os']
   },
   {
     skill: 'apple',
     title: 'Apple',
-    icon: DiApple,
+    icon: Icons.DiApple,
     category: 'platform',
     aliases: ['macos', 'ios-platform', 'apple-ecosystem', 'mac']
   },
@@ -1468,14 +1280,14 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'android',
     title: 'Android',
-    icon: DiAndroid,
+    icon: Icons.DiAndroid,
     category: 'platform',
     aliases: ['android-sdk', 'mobile-os', 'google-android', 'android-platform']
   },
   {
     skill: 'blackberry',
     title: 'BlackBerry',
-    icon: DiBlackberry,
+    icon: Icons.DiBlackberry,
     category: 'platform',
     aliases: ['rim', 'bb10', 'blackberry-os', 'legacy-mobile-platform']
   },
@@ -1484,7 +1296,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'cloud9',
     title: 'Cloud9',
-    icon: DiCloud9,
+    icon: Icons.DiCloud9,
     category: 'tool',
     aliases: ['c9', 'aws-cloud9', 'cloud-ide', 'online-development']
   },
@@ -1495,35 +1307,35 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'chrome',
     title: 'Chrome',
-    icon: DiChrome,
+    icon: Icons.DiChrome,
     category: 'tool',
     aliases: ['chrome-browser', 'google-chrome', 'web-browser', 'chromium']
   },
   {
     skill: 'firefox',
     title: 'Firefox',
-    icon: DiFirefox,
+    icon: Icons.DiFirefox,
     category: 'tool',
     aliases: ['mozilla-firefox', 'browser', 'web-browser', 'gecko']
   },
   {
     skill: 'ie',
     title: 'Internet Explorer',
-    icon: DiIe,
+    icon: Icons.DiIe,
     category: 'tool',
     aliases: ['internet-explorer', 'browser', 'microsoft-browser', 'legacy-browser']
   },
   {
     skill: 'safari',
     title: 'Safari',
-    icon: DiSafari,
+    icon: Icons.DiSafari,
     category: 'tool',
     aliases: ['apple-safari', 'browser', 'webkit', 'apple-browser']
   },
   {
     skill: 'opera',
     title: 'Opera',
-    icon: DiOpera,
+    icon: Icons.DiOpera,
     category: 'tool',
     aliases: ['opera-browser', 'browser', 'blink-browser', 'norwegian-browser']
   },
@@ -1534,21 +1346,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'dropbox',
     title: 'Dropbox',
-    icon: DiDropbox,
+    icon: Icons.DiDropbox,
     category: 'tool',
     aliases: ['cloud-storage', 'file-sharing', 'file-sync', 'online-storage']
   },
   {
     skill: 'onedrive',
     title: 'OneDrive',
-    icon: DiOnedrive,
+    icon: Icons.DiOnedrive,
     category: 'tool',
     aliases: ['microsoft-onedrive', 'cloud-storage', 'ms-storage', 'file-sync']
   },
   {
     skill: 'googledrive',
     title: 'Google Drive',
-    icon: DiGoogleDrive,
+    icon: Icons.DiGoogleDrive,
     category: 'tool',
     aliases: ['gdrive', 'cloud-storage', 'google-storage', 'online-documents']
   },
@@ -1559,14 +1371,14 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'googleanalytics',
     title: 'Google Analytics',
-    icon: DiGoogleAnalytics,
+    icon: Icons.DiGoogleAnalytics,
     category: 'tool', 
     aliases: ['ga', 'web-analytics', 'site-tracking', 'user-metrics']
   },
   {
     skill: 'modernizr',
     title: 'Modernizr',
-    icon: DiModernizr,
+    icon: Icons.DiModernizr,
     category: 'tool',
     aliases: ['feature-detection', 'browser-compatibility', 'feature-testing', 'progressive-enhancement']
   },
@@ -1577,7 +1389,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'unity',
     title: 'Unity',
-    icon: DiUnitySmall,
+    icon: Icons.DiUnitySmall,
     category: 'tool',
     aliases: ['unity3d', 'game-engine', 'cross-platform-games', '3d-development']
   },
@@ -1588,28 +1400,28 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'html5-3d',
     title: 'HTML5 3D Effects',
-    icon: DiHtml53DEffects,
+    icon: Icons.DiHtml53DEffects,
     category: 'programming',
     aliases: ['html-3d', 'web-3d', 'webgl', 'canvas-3d']
   },
   {
     skill: 'html5-connectivity',
     title: 'HTML5 Connectivity',
-    icon: DiHtml5Connectivity,
+    icon: Icons.DiHtml5Connectivity,
     category: 'programming',
     aliases: ['html-connectivity', 'websockets', 'sse', 'web-rtc']
   },
   {
     skill: 'html5-device',
     title: 'HTML5 Device Access',
-    icon: DiHtml5DeviceAccess,
+    icon: Icons.DiHtml5DeviceAccess,
     category: 'programming',
     aliases: ['html-device', 'geolocation', 'device-apis', 'web-bluetooth']
   },
   {
     skill: 'html5-multimedia',
     title: 'HTML5 Multimedia',
-    icon: DiHtml5Multimedia,
+    icon: Icons.DiHtml5Multimedia,
     category: 'programming',
     aliases: ['html-multimedia', 'web-audio', 'video-element', 'media-capture']
   },
@@ -1621,7 +1433,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'yii',
     title: 'Yii Framework',
-    icon: DiYii,
+    icon: Icons.DiYii,
     category: 'framework',
     aliases: ['yii-framework', 'php-yii', 'rapid-development-framework', 'component-based']
   },
@@ -1630,21 +1442,21 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'meteor',
     title: 'Meteor.js',
-    icon: DiMeteor,
+    icon: Icons.DiMeteor,
     category: 'framework',
     aliases: ['meteorjs', 'meteor-framework', 'isomorphic-javascript', 'real-time-web']
   },
   {
     skill: 'requirejs',
     title: 'RequireJS',
-    icon: DiRequirejs,
+    icon: Icons.DiRequirejs,
     category: 'framework',
     aliases: ['amd', 'module-loader', 'js-dependency-management', 'asynchronous-module-definition']
   },
   {
     skill: 'krakenjs',
     title: 'KrakenJS',
-    icon: DiKrakenjs,
+    icon: Icons.DiKrakenjs,
     category: 'framework',
     aliases: ['kraken', 'paypal-framework', 'express-framework', 'security-focused-nodejs']
   },
@@ -1657,7 +1469,7 @@ export const iconMappings: SkillIconMapping[] = [
   {
     skill: 'terminal',
     title: 'Terminal',
-    icon: DiTerminal,
+    icon: Icons.DiTerminal,
     category: 'tool',
     aliases: ['command-line', 'cli', 'shell', 'console', 'bash-terminal']
   }
