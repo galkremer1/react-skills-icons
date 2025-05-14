@@ -23,7 +23,7 @@ export const SkillGrid: React.FC<SkillGridProps> = ({
       }}
     >
       {skills.map((skill) => (
-        <SkillIcon key={skill.name} {...skill} />
+        <SkillIcon key={skill.skill} {...skill} />
       ))}
     </div>
   );
