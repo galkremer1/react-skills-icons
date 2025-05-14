@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
-import { SkillIcon } from '../components/SkillIcon';
+import { SkillIcon, TEXT_SIZES } from '../components/SkillIcon';
 import { iconMappings } from '../constants/iconMappings';
 
 const meta: Meta<typeof SkillIcon> = {
@@ -26,7 +26,7 @@ const meta: Meta<typeof SkillIcon> = {
     },
     textSize: {
       control: 'select',
-      options: ['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl']
+      options: TEXT_SIZES,
     },
     className: {
       table: {
@@ -67,19 +67,36 @@ export const Sizes: Story = {
 
 // Story showcasing different colors
 export const Colors: Story = {
-  args: {
-    skill: "rust",
-    size: 22,
-    color: "blue"
-  },
-
   render: () => (
     <div style={{ display: 'flex', gap: '1rem' }}>
       <SkillIcon skill="react" color="#61DAFB" />
       <SkillIcon skill="react" color="#FF4785" />
       <SkillIcon skill="react" color="#1EA7FD" />
     </div>
-  )
+  ),
+};
+
+// Story showcasing different text sizes
+export const TextSizes: Story = {
+  render: () => (
+    <div style={{ 
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '1rem',
+      alignItems: 'flex-start',
+      maxWidth: '600px',
+    }}>
+      {TEXT_SIZES.map(size => (
+        <SkillIcon 
+          key={size} 
+          skill="react" 
+          textSize={size} 
+          customLabel={`Text size: ${size}`} 
+          size={24}
+        />
+      ))}
+    </div>
+  ),
 };
 
 // Grid of all available icons

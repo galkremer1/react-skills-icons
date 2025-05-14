@@ -2,8 +2,11 @@ import React from 'react';
 import { IconType } from 'react-icons';
 import { getIconBySkill } from '../constants/iconMappings';
 
+export const TEXT_SIZES = ['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl'] as const;
+export type TextSize = typeof TEXT_SIZES[number];
+
 export interface SkillIconProps {
-  skill: string;  // Changed from key
+  skill: string;
   size?: number;
   color?: string;
   customIcon?: IconType;
@@ -11,11 +14,11 @@ export interface SkillIconProps {
   customLabel?: string;
   showLabel?: boolean;
   labelClassName?: string;
-  textSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
+  textSize?: TextSize;
 }
 
 export const SkillIcon: React.FC<SkillIconProps> = ({
-  skill,  // Changed from key
+  skill,
   size = 24,
   color,
   customIcon,
@@ -23,7 +26,7 @@ export const SkillIcon: React.FC<SkillIconProps> = ({
   showLabel = true,
   labelClassName = '',
   customLabel = '',
-  textSize = 'xs',
+  textSize = 'base',
 }) => {
   const mapping = getIconBySkill(skill);
   const Icon = customIcon || (mapping?.icon);
@@ -36,7 +39,7 @@ export const SkillIcon: React.FC<SkillIconProps> = ({
 
   return (
     <div 
-      className={`flex flex-col items-center ${className}`}
+      className={`flex flex-col items-center text-center ${className}`}
       data-testid={`skill-icon-${skill.toLowerCase()}`}
     >
       <Icon size={size} color={color} />

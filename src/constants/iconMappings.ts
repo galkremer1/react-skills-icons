@@ -79,64 +79,109 @@ import {
   DiAngularSimple,
   DiApple,
   DiAtom,
+  DiAws,
   DiBackbone,
   DiBootstrap,
   DiChrome,
   DiClojure,
   DiCloud9,
   DiCodeigniter,
+  DiCoda,
   DiDart,
   DiDebian,
+  DiDigitalOcean,
   DiDjango,
   DiDocker,
+  DiDreamweaver,
+  DiDropbox,
   DiDrupal,
   DiEclipse,
   DiEmber,
   DiErlang,
+  DiExtjs,
+  DiFirefox,
   DiFsharp,
   DiGit,
   DiGithub,
+  DiGoogleAnalytics,
+  DiGoogleDrive,
+  DiGroovy,
+  DiGrunt,
+  DiGulp,
   DiHaskell,
+  DiHeroku,
   DiHtml5,
+  DiHtml53DEffects,
+  DiHtml5Connectivity,
+  DiHtml5DeviceAccess,
+  DiHtml5Multimedia,
+  DiIe,
   DiIllustrator,
   DiIntellij,
+  DiIonic,
   DiJava,
   DiJavascript,
   DiJenkins,
+  DiJoomla,
   DiJqueryLogo,
+  DiJsBadge,
+  DiKomodo,
+  DiKrakenjs,
   DiLaravel,
   DiLinux,
+  DiMagento,
   DiMarkdown,
   DiMaterializecss,
   DiMeteor,
+  DiModernizr,
   DiMongodb,
+  DiMootools,
+  DiMsqlServer,
   DiMysql,
   DiNetbeans,
   DiNginx,
   DiNodejs,
+  DiNodejsSmall,
   DiNpm,
+  DiOnedrive,
+  DiOpenshift,
+  DiOpera,
   DiPerl,
+  DiPhonegap,
+  DiPhotoshop,
   DiPhp,
   DiPostgresql,
+  DiProlog,
   DiPython,
   DiReact,
   DiRedis,
+  DiRequirejs,
   DiRuby,
   DiRust,
+  DiSafari,
   DiSass,
   DiScala,
+  DiSizzlejs,
   DiSqllite,
+  DiStylus,
+  DiSublime,
   DiSwift,
   DiSymfony,
   DiTerminal,
+  DiTravis,
+  DiTypo3,
   DiUbuntu,
   DiUnitySmall,
   DiVim,
   DiVisualstudio,
+  DiWindows,
   DiWordpress,
   DiYii,
   DiCss3,
-  DiProlog
+  DiCss3Full,
+  DiBower,
+  DiBrackets,
+  DiBlackberry
 } from 'react-icons/di';
 import { IconType } from 'react-icons';
 
@@ -1002,7 +1047,487 @@ export const iconMappings: SkillIconMapping[] = [
     icon: DiMarkdown,
     category: 'tool',
     aliases: ['md']
-  }
+  },
+
+  // Alternative DevIcon versions (continued)
+  {
+    skill: 'angular1',
+    title: 'Angular',
+    icon: DiAngularSimple,
+    category: 'framework',
+    aliases: ['ng-alt']
+  },
+  {
+    skill: 'bootstrap1',
+    title: 'Bootstrap',
+    icon: DiBootstrap,
+    category: 'framework',
+    aliases: ['bootstrap-alt']
+  },
+  {
+    skill: 'clojure1',
+    title: 'Clojure',
+    icon: DiClojure,
+    category: 'programming',
+    aliases: ['clj-alt']
+  },
+  {
+    skill: 'django1',
+    title: 'Django',
+    icon: DiDjango,
+    category: 'framework',
+    aliases: ['django-alt']
+  },
+  {
+    skill: 'nodejs1',
+    title: 'Node.js',
+    icon: DiNodejs,
+    category: 'framework',
+    aliases: ['node-alt']
+  },
+  {
+    skill: 'erlang1',
+    title: 'Erlang',
+    icon: DiErlang,
+    category: 'programming',
+    aliases: ['erl-alt']
+  },
+  {
+    skill: 'fsharp1',
+    title: 'F#',
+    icon: DiFsharp,
+    category: 'programming',
+    aliases: ['fs-alt']
+  },
+  {
+    skill: 'github1',
+    title: 'GitHub',
+    icon: DiGithub,
+    category: 'platform',
+    aliases: ['github-alt']
+  },
+  {
+    skill: 'haskell1',
+    title: 'Haskell',
+    icon: DiHaskell,
+    category: 'programming',
+    aliases: ['hs-alt']
+  },
+  {
+    skill: 'jenkins1',
+    title: 'Jenkins',
+    icon: DiJenkins,
+    category: 'tool',
+    aliases: ['jenkins-alt']
+  },
+  {
+    skill: 'apple',
+    title: 'Apple',
+    icon: DiApple,
+    category: 'platform',
+    aliases: ['macos', 'ios-platform']
+  },
+  {
+    skill: 'chrome',
+    title: 'Chrome',
+    icon: DiChrome,
+    category: 'tool',
+    aliases: ['chrome-browser']
+  },
+  {
+    skill: 'cloud9',
+    title: 'Cloud9',
+    icon: DiCloud9,
+    category: 'tool',
+    aliases: ['c9']
+  },
+  {
+    skill: 'illustrator',
+    title: 'Adobe Illustrator',
+    icon: DiIllustrator,
+    category: 'tool',
+    aliases: ['ai']
+  },
+  // Additional Web Development Tools & Frameworks
+{
+  skill: 'sizzlejs',
+  title: 'SizzleJS',
+  icon: DiSizzlejs,
+  category: 'framework',
+  aliases: ['sizzle', 'css-selector-engine']
+},
+{
+  skill: 'stylus',
+  title: 'Stylus',
+  icon: DiStylus,
+  category: 'tool',
+  aliases: ['css-preprocessor']
+},
+{
+  skill: 'firefox',
+  title: 'Firefox',
+  icon: DiFirefox,
+  category: 'tool',
+  aliases: ['mozilla-firefox', 'browser']
+},
+{
+  skill: 'ie',
+  title: 'Internet Explorer',
+  icon: DiIe,
+  category: 'tool',
+  aliases: ['internet-explorer', 'browser']
+},
+{
+  skill: 'safari',
+  title: 'Safari',
+  icon: DiSafari,
+  category: 'tool',
+  aliases: ['apple-safari', 'browser']
+},
+{
+  skill: 'opera',
+  title: 'Opera',
+  icon: DiOpera,
+  category: 'tool',
+  aliases: ['opera-browser', 'browser']
+},
+{
+  skill: 'modernizr',
+  title: 'Modernizr',
+  icon: DiModernizr,
+  category: 'tool',
+  aliases: ['feature-detection']
+},
+
+// DevOps & Cloud Platforms
+{
+  skill: 'aws1',
+  title: 'AWS',
+  icon: DiAws,
+  category: 'cloud',
+  aliases: ['amazon-web-services-alt']
+},
+{
+  skill: 'heroku',
+  title: 'Heroku',
+  icon: DiHeroku,
+  category: 'cloud',
+  aliases: ['paas']
+},
+{
+  skill: 'openshift',
+  title: 'OpenShift',
+  icon: DiOpenshift,
+  category: 'cloud',
+  aliases: ['redhat-openshift']
+},
+{
+  skill: 'digitalocean',
+  title: 'DigitalOcean',
+  icon: DiDigitalOcean,
+  category: 'cloud',
+  aliases: ['do']
+},
+{
+  skill: 'travis1',
+  title: 'Travis CI',
+  icon: DiTravis,
+  category: 'tool',
+  aliases: ['ci-alt']
+},
+
+// Content Management Systems & E-commerce
+{
+  skill: 'joomla',
+  title: 'Joomla',
+  icon: DiJoomla,
+  category: 'framework',
+  aliases: ['cms']
+},
+{
+  skill: 'magento',
+  title: 'Magento',
+  icon: DiMagento,
+  category: 'framework',
+  aliases: ['e-commerce']
+},
+{
+  skill: 'typo3',
+  title: 'TYPO3',
+  icon: DiTypo3,
+  category: 'framework',
+  aliases: ['cms']
+},
+
+// Other Frameworks & Libraries
+{
+  skill: 'mootools',
+  title: 'MooTools',
+  icon: DiMootools,
+  category: 'framework',
+  aliases: ['javascript-framework']
+},
+{
+  skill: 'requirejs',
+  title: 'RequireJS',
+  icon: DiRequirejs,
+  category: 'framework',
+  aliases: ['amd']
+},
+{
+  skill: 'extjs',
+  title: 'ExtJS',
+  icon: DiExtjs,
+  category: 'framework',
+  aliases: ['sencha']
+},
+{
+  skill: 'ionic',
+  title: 'Ionic Framework',
+  icon: DiIonic,
+  category: 'framework',
+  aliases: ['ionic-framework', 'mobile']
+},
+{
+  skill: 'krakenjs',
+  title: 'KrakenJS',
+  icon: DiKrakenjs,
+  category: 'framework',
+  aliases: ['paypal']
+},
+
+// Development Tools & Environments
+{
+  skill: 'sublime',
+  title: 'Sublime Text',
+  icon: DiSublime,
+  category: 'tool',
+  aliases: ['text-editor']
+},
+{
+  skill: 'dreamweaver',
+  title: 'Dreamweaver',
+  icon: DiDreamweaver,
+  category: 'tool',
+  aliases: ['adobe-dreamweaver']
+},
+{
+  skill: 'komodo',
+  title: 'Komodo IDE',
+  icon: DiKomodo,
+  category: 'tool',
+  aliases: ['activestate']
+},
+{
+  skill: 'coda',
+  title: 'Coda',
+  icon: DiCoda,
+  category: 'tool',
+  aliases: ['panic']
+},
+{
+  skill: 'brackets',
+  title: 'Brackets',
+  icon: DiBrackets,
+  category: 'tool',
+  aliases: ['adobe-brackets']
+},
+
+// Other Technologies
+{
+  skill: 'phonegap',
+  title: 'PhoneGap',
+  icon: DiPhonegap,
+  category: 'tool',
+  aliases: ['cordova', 'apache-cordova']
+},
+{
+  skill: 'bower',
+  title: 'Bower',
+  icon: DiBower,
+  category: 'tool',
+  aliases: ['package-manager']
+},
+{
+  skill: 'grunt',
+  title: 'Grunt',
+  icon: DiGrunt,
+  category: 'tool',
+  aliases: ['task-runner']
+},
+{
+  skill: 'gulp',
+  title: 'Gulp',
+  icon: DiGulp,
+  category: 'tool',
+  aliases: ['task-runner']
+},
+
+// Creative Software
+{
+  skill: 'photoshop',
+  title: 'Adobe Photoshop',
+  icon: DiPhotoshop,
+  category: 'tool',
+  aliases: ['ps', 'image-editing']
+},
+
+// Operating Systems & Platforms
+{
+  skill: 'windows',
+  title: 'Windows',
+  icon: DiWindows,
+  category: 'platform',
+  aliases: ['microsoft-windows']
+},
+{
+  skill: 'blackberry',
+  title: 'BlackBerry',
+  icon: DiBlackberry,
+  category: 'platform',
+  aliases: ['rim']
+},
+
+// File Storage & Sync
+{
+  skill: 'dropbox',
+  title: 'Dropbox',
+  icon: DiDropbox,
+  category: 'tool',
+  aliases: ['cloud-storage']
+},
+{
+  skill: 'onedrive',
+  title: 'OneDrive',
+  icon: DiOnedrive,
+  category: 'tool',
+  aliases: ['microsoft-onedrive', 'cloud-storage']
+},
+{
+  skill: 'googledrive',
+  title: 'Google Drive',
+  icon: DiGoogleDrive,
+  category: 'tool',
+  aliases: ['gdrive', 'cloud-storage']
+},
+
+// Databases
+{
+  skill: 'mssql',
+  title: 'Microsoft SQL Server',
+  icon: DiMsqlServer,
+  category: 'database',
+  aliases: ['sql-server', 'tsql']
+},
+
+// Analytics
+{
+  skill: 'googleanalytics',
+  title: 'Google Analytics',
+  icon: DiGoogleAnalytics,
+  category: 'tool', 
+  aliases: ['ga', 'web-analytics']
+},
+
+// Additional Alternative Icons
+{
+  skill: 'javascript-badge',
+  title: 'JavaScript',
+  icon: DiJsBadge,
+  category: 'programming',
+  aliases: ['js-badge']
+},
+{
+  skill: 'nodejs-small',
+  title: 'Node.js',
+  icon: DiNodejsSmall,
+  category: 'framework',
+  aliases: ['node-small']
+},
+{
+  skill: 'html5-3d',
+  title: 'HTML5 3D Effects',
+  icon: DiHtml53DEffects,
+  category: 'programming',
+  aliases: ['html-3d']
+},
+{
+  skill: 'html5-connectivity',
+  title: 'HTML5 Connectivity',
+  icon: DiHtml5Connectivity,
+  category: 'programming',
+  aliases: ['html-connectivity']
+},
+{
+  skill: 'html5-device',
+  title: 'HTML5 Device Access',
+  icon: DiHtml5DeviceAccess,
+  category: 'programming',
+  aliases: ['html-device']
+},
+{
+  skill: 'html5-multimedia',
+  title: 'HTML5 Multimedia',
+  icon: DiHtml5Multimedia,
+  category: 'programming',
+  aliases: ['html-multimedia']
+},
+{
+  skill: 'css3-full',
+  title: 'CSS3',
+  icon: DiCss3Full,
+  category: 'programming',
+  aliases: ['css-full']
+},
+{
+  skill: 'dart1',
+  title: 'Dart',
+  icon: DiDart,
+  category: 'programming',
+  aliases: ['dart-alt', 'flutter-language-alt']
+},
+{
+  skill: 'groovy1',
+  title: 'Groovy',
+  icon: DiGroovy,
+  category: 'programming',
+  aliases: ['groovy-alt', 'groovy-language']
+},
+{
+  skill: 'perl1',
+  title: 'Perl',
+  icon: DiPerl,
+  category: 'programming',
+  aliases: ['perl-alt', 'pl-alt']
+},
+{
+  skill: 'react1',
+  title: 'React',
+  icon: DiReact,
+  category: 'framework',
+  aliases: ['reactjs-alt', 'react-alt']
+},
+{
+  skill: 'php1',
+  title: 'PHP',
+  icon: DiPhp,
+  category: 'programming',
+  aliases: ['php-alt', 'php-language']
+},
+{
+  skill: 'scala1',
+  title: 'Scala',
+  icon: DiScala,
+  category: 'programming',
+  aliases: ['scala-alt', 'scala-language']
+},
+{
+  skill: 'swift1',
+  title: 'Swift',
+  icon: DiSwift,
+  category: 'programming',
+  aliases: ['swift-alt', 'apple-language']
+}
 ];
 
 export const getIconBySkill = (skill: string): SkillIconMapping | undefined => {
