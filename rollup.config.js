@@ -2,6 +2,7 @@ import { readFileSync } from 'fs';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
+import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
 
 const packageJson = JSON.parse(readFileSync('./package.json'));
@@ -28,12 +29,26 @@ export default [
         tsconfig: './tsconfig.json',
         exclude: ['**/__tests__/**', '**/*.test.ts', '**/*.test.tsx'],
       }),
+      postcss({
+        config: true,
+        extensions: ['.css'],
+        minimize: true,
+        inject: {
+          insertAt: 'top',
+        },
+        extract: false,
+      }),
     ],
     external: ['react', 'react-dom', 'react-icons'],
   },
   {
-    input: 'dist/types/index.d.ts',
+    input: 'src/index.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    plugins: [dts()],
+    plugins: [
+      dts({
+        respectExternal: true,
+        exclude: ['**/*.css', 'src/styles/**/*'],
+      }),
+    ],
   },
 ];

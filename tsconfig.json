@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es2016", "dom"],
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -11,11 +10,31 @@
     "declaration": true,
     "declarationDir": "./dist/types",
     "sourceMap": true,
-    "outDir": "dist",
-    "moduleResolution": "node",
+    "outDir": "./dist",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "types": [
+      "react",
+      "react-dom",
+      "jest",
+      "@testing-library/jest-dom"
+    ],
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/__tests__/**"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/__tests__/**",
+    "**/*.test.tsx",
+    "**/*.stories.tsx"
+  ]
 }
