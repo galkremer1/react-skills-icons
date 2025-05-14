@@ -714,7 +714,7 @@ export const iconMappings: SkillIconMapping[] = [
     title: 'Tailwind CSS',
     icon: SiTailwindcss,
     category: 'framework',
-    aliases: ['tailwindcss', 'utility-css', 'atomic-css', 'utility-first']
+    aliases: ['tailwindcss', 'utility-css', 'atomic-css', 'utility-first', 'tailwind css']
   },
   {
     skill: 'bootstrap',
@@ -836,7 +836,7 @@ export const iconMappings: SkillIconMapping[] = [
     title: 'Node.js',
     icon: SiNodedotjs,
     category: 'framework',
-    aliases: ['node', 'nodejs', 'server-javascript', 'javascript-runtime', 'v8-runtime']
+    aliases: ['node', 'nodejs', 'server-javascript', 'javascript-runtime', 'v8-runtime', 'node.js']
   },
   {
     skill: 'nodejs1',
