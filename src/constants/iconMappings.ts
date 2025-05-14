@@ -39,27 +39,104 @@ import {
   SiJenkins,
   SiCircleci,
   SiTravisci,
+  SiElixir,
+  SiHaskell,
+  SiErlang,
+  SiLua,
+  SiPerl,
+  SiR,
+  SiScala,
+  SiClojure,
+  SiJulia,
+  SiOcaml,
+  SiFsharp,
+  SiLatex,
+  SiWebassembly,
+  SiSolidity,
+  SiAssemblyscript,
+  SiGnubash,
+  SiPowershell,
+  SiFortran,
+  SiApachegroovy,
+  SiDotnet,
+  SiDelphi,
+  SiBulma,
+  SiBootstrap,
+  SiAntdesign,
+  SiChakraui,
+  SiLess,
+  SiPostcss,
+  SiCoffeescript,
+  SiJson,
+  SiYaml,
 } from 'react-icons/si';
 
 import { TbBrandCSharp, TbBrandAzure } from "react-icons/tb";
 import { FaAws, FaJava } from "react-icons/fa";
 
 import {
-  DiGit,
+  DiAndroid,
+  DiAngularSimple,
+  DiApple,
+  DiAtom,
+  DiBackbone,
+  DiBootstrap,
+  DiChrome,
+  DiClojure,
+  DiCloud9,
+  DiCodeigniter,
+  DiDart,
+  DiDebian,
+  DiDjango,
   DiDocker,
-  DiJavascript,
-  DiPython,
+  DiDrupal,
+  DiEclipse,
+  DiEmber,
+  DiErlang,
+  DiFsharp,
+  DiGit,
+  DiGithub,
+  DiHaskell,
+  DiHtml5,
+  DiIllustrator,
+  DiIntellij,
   DiJava,
+  DiJavascript,
+  DiJenkins,
+  DiJqueryLogo,
+  DiLaravel,
+  DiLinux,
+  DiMarkdown,
+  DiMaterializecss,
+  DiMeteor,
+  DiMongodb,
+  DiMysql,
+  DiNetbeans,
+  DiNginx,
+  DiNodejs,
+  DiNpm,
+  DiPerl,
+  DiPhp,
+  DiPostgresql,
+  DiPython,
+  DiReact,
+  DiRedis,
   DiRuby,
   DiRust,
-  DiPostgresql,
-  DiMysql,
-  DiMongodb,
-  DiRedis,
-  DiNginx,
-  DiHtml5,
-  DiCss3,
   DiSass,
+  DiScala,
+  DiSqllite,
+  DiSwift,
+  DiSymfony,
+  DiTerminal,
+  DiUbuntu,
+  DiUnitySmall,
+  DiVim,
+  DiVisualstudio,
+  DiWordpress,
+  DiYii,
+  DiCss3,
+  DiProlog
 } from 'react-icons/di';
 import { IconType } from 'react-icons';
 
@@ -164,6 +241,160 @@ export const iconMappings: SkillIconMapping[] = [
     icon: SiDart,
     category: 'programming',
     aliases: ['flutter-lang']
+  },
+  {
+    skill: 'elixir',
+    title: 'Elixir',
+    icon: SiElixir,
+    category: 'programming',
+    aliases: ['ex', 'exs']
+  },
+  {
+    skill: 'haskell',
+    title: 'Haskell',
+    icon: SiHaskell,
+    category: 'programming',
+    aliases: ['hs']
+  },
+  {
+    skill: 'erlang',
+    title: 'Erlang',
+    icon: SiErlang,
+    category: 'programming',
+    aliases: ['erl']
+  },
+  {
+    skill: 'lua',
+    title: 'Lua',
+    icon: SiLua,
+    category: 'programming',
+    aliases: []
+  },
+  {
+    skill: 'perl',
+    title: 'Perl',
+    icon: SiPerl,
+    category: 'programming',
+    aliases: ['pl']
+  },
+  {
+    skill: 'r',
+    title: 'R',
+    icon: SiR,
+    category: 'programming',
+    aliases: ['rlang']
+  },
+  {
+    skill: 'scala',
+    title: 'Scala',
+    icon: SiScala,
+    category: 'programming',
+    aliases: []
+  },
+  {
+    skill: 'clojure',
+    title: 'Clojure',
+    icon: SiClojure,
+    category: 'programming',
+    aliases: ['clj']
+  },
+  {
+    skill: 'julia',
+    title: 'Julia',
+    icon: SiJulia,
+    category: 'programming',
+    aliases: ['jl']
+  },
+  {
+    skill: 'ocaml',
+    title: 'OCaml',
+    icon: SiOcaml,
+    category: 'programming',
+    aliases: ['ml']
+  },
+  {
+    skill: 'fsharp',
+    title: 'F#',
+    icon: SiFsharp,
+    category: 'programming',
+    aliases: ['fs']
+  },
+  {
+    skill: 'latex',
+    title: 'LaTeX',
+    icon: SiLatex,
+    category: 'programming',
+    aliases: ['tex']
+  },
+  {
+    skill: 'wasm',
+    title: 'WebAssembly',
+    icon: SiWebassembly,
+    category: 'programming',
+    aliases: ['webassembly']
+  },
+  {
+    skill: 'solidity',
+    title: 'Solidity',
+    icon: SiSolidity,
+    category: 'programming',
+    aliases: ['sol', 'ethereum']
+  },
+  {
+    skill: 'prolog',
+    title: 'Prolog',
+    icon: DiProlog,
+    category: 'programming',
+    aliases: ['pl']
+  },
+  {
+    skill: 'assembly',
+    title: 'Assembly',
+    icon: SiAssemblyscript,
+    category: 'programming',
+    aliases: ['asm']
+  },
+  {
+    skill: 'bash',
+    title: 'Bash',
+    icon: SiGnubash,
+    category: 'programming',
+    aliases: ['shell']
+  },
+  {
+    skill: 'powershell',
+    title: 'PowerShell',
+    icon: SiPowershell,
+    category: 'programming',
+    aliases: []
+  },
+  {
+    skill: 'fortran',
+    title: 'Fortran',
+    icon: SiFortran,
+    category: 'programming',
+    aliases: []
+  },
+  {
+    skill: 'groovy',
+    title: 'Groovy',
+    icon: SiApachegroovy,
+    category: 'programming',
+    aliases: []
+  },
+  {
+    skill: 'vbnet',
+    title: 'VB.NET',
+    icon: SiDotnet,
+    category: 'programming',
+    aliases: ['visualbasic']
+  },
+  {
+    skill: 'delphi',
+    title: 'Delphi',
+    icon: SiDelphi,
+    category: 'programming',
+    aliases: []
   },
 
   // Frontend Frameworks
@@ -508,6 +739,269 @@ export const iconMappings: SkillIconMapping[] = [
     icon: DiSass,
     category: 'tool',
     aliases: ['scss-alt']
+  },
+    // Styling Frameworks
+  {
+    skill: 'bulma',
+    title: 'Bulma',
+    icon: SiBulma,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'bootstrap',
+    title: 'Bootstrap',
+    icon: SiBootstrap,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'antdesign',
+    title: 'Ant Design',
+    icon: SiAntdesign,
+    category: 'framework',
+    aliases: ['antd']
+  },
+  {
+    skill: 'chakraui',
+    title: 'Chakra UI',
+    icon: SiChakraui,
+    category: 'framework',
+    aliases: []
+  },
+
+  // CSS Preprocessors & Tools
+  {
+    skill: 'less',
+    title: 'Less',
+    icon: SiLess,
+    category: 'tool',
+    aliases: []
+  },
+  {
+    skill: 'postcss',
+    title: 'PostCSS',
+    icon: SiPostcss,
+    category: 'tool',
+    aliases: []
+  },
+
+  // Additional Languages & Tools
+  {
+    skill: 'coffeescript',
+    title: 'CoffeeScript',
+    icon: SiCoffeescript,
+    category: 'programming',
+    aliases: ['coffee']
+  },
+  {
+    skill: 'json',
+    title: 'JSON',
+    icon: SiJson,
+    category: 'programming',
+    aliases: []
+  },
+  {
+    skill: 'yaml',
+    title: 'YAML',
+    icon: SiYaml,
+    category: 'programming',
+    aliases: []
+  },
+
+
+  // Development Tools & Environments
+  {
+    skill: 'android',
+    title: 'Android',
+    icon: DiAndroid,
+    category: 'platform',
+    aliases: ['android-sdk']
+  },
+  {
+    skill: 'atom',
+    title: 'Atom',
+    icon: DiAtom,
+    category: 'tool',
+    aliases: ['atom-editor']
+  },
+  {
+    skill: 'eclipse',
+    title: 'Eclipse',
+    icon: DiEclipse,
+    category: 'tool',
+    aliases: ['eclipse-ide']
+  },
+  {
+    skill: 'intellij',
+    title: 'IntelliJ IDEA',
+    icon: DiIntellij,
+    category: 'tool',
+    aliases: ['idea']
+  },
+  {
+    skill: 'netbeans',
+    title: 'NetBeans',
+    icon: DiNetbeans,
+    category: 'tool',
+    aliases: []
+  },
+  {
+    skill: 'vim',
+    title: 'Vim',
+    icon: DiVim,
+    category: 'tool',
+    aliases: ['neovim']
+  },
+  {
+    skill: 'visualstudio',
+    title: 'Visual Studio',
+    icon: DiVisualstudio,
+    category: 'tool',
+    aliases: ['vs']
+  },
+
+  // Frameworks & Libraries
+  {
+    skill: 'backbone',
+    title: 'Backbone.js',
+    icon: DiBackbone,
+    category: 'framework',
+    aliases: ['backbonejs']
+  },
+  {
+    skill: 'codeigniter',
+    title: 'CodeIgniter',
+    icon: DiCodeigniter,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'drupal',
+    title: 'Drupal',
+    icon: DiDrupal,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'ember',
+    title: 'Ember.js',
+    icon: DiEmber,
+    category: 'framework',
+    aliases: ['emberjs']
+  },
+  {
+    skill: 'jquery',
+    title: 'jQuery',
+    icon: DiJqueryLogo,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'laravel',
+    title: 'Laravel',
+    icon: DiLaravel,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'materialize',
+    title: 'Materialize CSS',
+    icon: DiMaterializecss,
+    category: 'framework',
+    aliases: ['materializecss']
+  },
+  {
+    skill: 'meteor',
+    title: 'Meteor.js',
+    icon: DiMeteor,
+    category: 'framework',
+    aliases: ['meteorjs']
+  },
+  {
+    skill: 'symfony',
+    title: 'Symfony',
+    icon: DiSymfony,
+    category: 'framework',
+    aliases: []
+  },
+  {
+    skill: 'wordpress',
+    title: 'WordPress',
+    icon: DiWordpress,
+    category: 'framework',
+    aliases: ['wp']
+  },
+  {
+    skill: 'yii',
+    title: 'Yii Framework',
+    icon: DiYii,
+    category: 'framework',
+    aliases: []
+  },
+
+  // Development Tools
+  {
+    skill: 'npm',
+    title: 'npm',
+    icon: DiNpm,
+    category: 'tool',
+    aliases: ['node-package-manager']
+  },
+  {
+    skill: 'terminal',
+    title: 'Terminal',
+    icon: DiTerminal,
+    category: 'tool',
+    aliases: ['cli', 'command-line']
+  },
+  {
+    skill: 'unity',
+    title: 'Unity',
+    icon: DiUnitySmall,
+    category: 'tool',
+    aliases: ['unity3d']
+  },
+
+  // Operating Systems & Platforms
+  {
+    skill: 'debian',
+    title: 'Debian',
+    icon: DiDebian,
+    category: 'platform',
+    aliases: []
+  },
+  {
+    skill: 'linux',
+    title: 'Linux',
+    icon: DiLinux,
+    category: 'platform',
+    aliases: ['gnu-linux']
+  },
+  {
+    skill: 'ubuntu',
+    title: 'Ubuntu',
+    icon: DiUbuntu,
+    category: 'platform',
+    aliases: []
+  },
+
+  // Databases
+  {
+    skill: 'sqlite',
+    title: 'SQLite',
+    icon: DiSqllite,
+    category: 'database',
+    aliases: []
+  },
+
+  // Documentation & Markup
+  {
+    skill: 'markdown',
+    title: 'Markdown',
+    icon: DiMarkdown,
+    category: 'tool',
+    aliases: ['md']
   }
 ];
 
