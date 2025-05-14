@@ -1,9 +1,9 @@
 import React from 'react';
 import { IconType } from 'react-icons';
-import { getIconByName } from '../constants/iconMappings';
+import { getIconBySkill } from '../constants/iconMappings';
 
 export interface SkillIconProps {
-  name: string;
+  skill: string;  // Changed from key
   size?: number;
   color?: string;
   customIcon?: IconType;
@@ -15,33 +15,34 @@ export interface SkillIconProps {
 }
 
 export const SkillIcon: React.FC<SkillIconProps> = ({
-  name,
+  skill,  // Changed from key
   size = 24,
   color,
   customIcon,
   className,
   showLabel = true,
   labelClassName = '',
-  customLabel= '',
+  customLabel = '',
   textSize = 'xs',
 }) => {
-  const mapping = getIconByName(name);
+  const mapping = getIconBySkill(skill);
   const Icon = customIcon || (mapping?.icon);
+  const label = customLabel || mapping?.title || skill;
 
   if (!Icon) {
-    console.warn(`Icon not found for skill: ${name}`);
+    console.warn(`Icon not found for skill: ${skill}`);
     return null;
   }
 
   return (
     <div 
       className={`flex flex-col items-center ${className}`}
-      data-testid={`skill-icon-${name}`}
+      data-testid={`skill-icon-${skill.toLowerCase()}`}
     >
       <Icon size={size} color={color} />
       {showLabel && (
         <span className={`mt-2 text-${textSize} ${labelClassName}`}>
-          {customLabel || name}
+          {label}
         </span>
       )}
     </div>

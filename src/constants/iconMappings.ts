@@ -61,72 +61,90 @@ import {
   DiCss3,
   DiSass,
 } from 'react-icons/di';
-import { SkillIconMapping } from '../types';
+import { IconType } from 'react-icons';
+
+export interface SkillIconMapping {
+  skill: string;  
+  title: string;
+  icon: IconType;
+  category: 'programming' | 'framework' | 'database' | 'cloud' | 'tool' | 'platform';
+  aliases: string[];
+}
 
 export const iconMappings: SkillIconMapping[] = [
-  // Programming Languages
   {
-    name: 'javascript',
+    skill: 'javascript',  
+    title: 'JavaScript',
     icon: SiJavascript,
     category: 'programming',
     aliases: ['js', 'ecmascript']
   },
   {
-    name: 'typescript',
+    skill: 'typescript',
+    title: 'TypeScript',
     icon: SiTypescript,
     category: 'programming',
     aliases: ['ts']
   },
   {
-    name: 'python',
+    skill: 'python',
+    title: 'Python',
     icon: SiPython,
     category: 'programming',
     aliases: ['py']
   },
   {
-    name: 'java',
+    skill: 'java',
+    title: 'Java',
     icon: FaJava,
     category: 'programming',
     aliases: ['jvm']
   },
   {
-    name: 'rust',
+    skill: 'rust',
+    title: 'Rust',
     icon: SiRust,
     category: 'programming',
     aliases: ['rs']
   },
   {
-    name: 'go',
+    skill: 'go',
+    title: 'Go',
     icon: SiGo,
     category: 'programming',
     aliases: ['golang']
   },
   {
-    name: 'cpp',
+    skill: 'cpp',
+    title: 'C++',
     icon: SiCplusplus,
     category: 'programming',
     aliases: ['c++']
   },
   {
-    name: 'csharp',
+    skill: 'csharp',
+    title: 'C#',
     icon: TbBrandCSharp,
     category: 'programming',
     aliases: ['c#', 'dotnet']
   },
   {
-    name: 'php',
+    skill: 'php',
+    title: 'PHP',
     icon: SiPhp,
     category: 'programming',
     aliases: []
   },
   {
-    name: 'swift',
+    skill: 'swift',
+    title: 'Swift',
     icon: SiSwift,
     category: 'programming',
     aliases: ['ios']
   },
   {
-    name: 'kotlin',
+    skill: 'kotlin',
+    title: 'Kotlin',
     icon: SiKotlin,
     category: 'programming',
     aliases: ['android']
@@ -134,13 +152,15 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Additional Programming Languages
   {
-    name: 'ruby',
+    skill: 'ruby',
+    title: 'Ruby',
     icon: DiRuby,
     category: 'programming',
     aliases: ['rb', 'rails']
   },
   {
-    name: 'dart',
+    skill: 'dart',
+    title: 'Dart',
     icon: SiDart,
     category: 'programming',
     aliases: ['flutter-lang']
@@ -148,25 +168,29 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Frontend Frameworks
   {
-    name: 'react',
+    skill: 'react',
+    title: 'React',
     icon: SiReact,
     category: 'framework',
     aliases: ['reactjs', 'react.js']
   },
   {
-    name: 'vue',
+    skill: 'vue',
+    title: 'Vue.js',
     icon: SiVuedotjs,
     category: 'framework',
     aliases: ['vuejs', 'vue.js']
   },
   {
-    name: 'angular',
+    skill: 'angular',
+    title: 'Angular',
     icon: SiAngular,
     category: 'framework',
     aliases: ['ng']
   },
   {
-    name: 'next',
+    skill: 'next',
+    title: 'Next.js',
     icon: SiNextdotjs,
     category: 'framework',
     aliases: ['nextjs', 'next.js']
@@ -174,37 +198,43 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Backend Frameworks
   {
-    name: 'node',
+    skill: 'nodejs',
+    title: 'Node.js',
     icon: SiNodedotjs,
     category: 'framework',
-    aliases: ['nodejs', 'node.js']
+    aliases: ['node', 'nodejs']
   },
   {
-    name: 'express',
+    skill: 'express',
+    title: 'Express.js',
     icon: SiExpress,
     category: 'framework',
     aliases: ['expressjs']
   },
   {
-    name: 'nest',
+    skill: 'nest',
+    title: 'NestJS',
     icon: SiNestjs,
     category: 'framework',
     aliases: ['nestjs']
   },
   {
-    name: 'django',
+    skill: 'django',
+    title: 'Django',
     icon: SiDjango,
     category: 'framework',
     aliases: ['py-web']
   },
   {
-    name: 'flask',
+    skill: 'flask',
+    title: 'Flask',
     icon: SiFlask,
     category: 'framework',
     aliases: []
   },
   {
-    name: 'spring',
+    skill: 'spring',
+    title: 'Spring',
     icon: SiSpring,
     category: 'framework',
     aliases: ['spring-boot']
@@ -212,37 +242,43 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Databases
   {
-    name: 'mongodb',
+    skill: 'mongodb',
+    title: 'MongoDB',
     icon: SiMongodb,
     category: 'database',
     aliases: ['mongo']
   },
   {
-    name: 'postgresql',
+    skill: 'postgresql',
+    title: 'PostgreSQL',
     icon: SiPostgresql,
     category: 'database',
     aliases: ['postgres']
   },
   {
-    name: 'mysql',
+    skill: 'mysql',
+    title: 'MySQL',
     icon: SiMysql,
     category: 'database',
     aliases: []
   },
   {
-    name: 'redis',
+    skill: 'redis',
+    title: 'Redis',
     icon: SiRedis,
     category: 'database',
     aliases: ['cache']
   },
   {
-    name: 'neo4j',
+    skill: 'neo4j',
+    title: 'Neo4j',
     icon: SiNeo4J,
     category: 'database',
     aliases: ['graph-db']
   },
   {
-    name: 'graphql',
+    skill: 'graphql',
+    title: 'GraphQL',
     icon: SiGraphql,
     category: 'database',
     aliases: ['gql']
@@ -250,31 +286,36 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Cloud & DevOps
   {
-    name: 'aws',
+    skill: 'aws',
+    title: 'AWS',
     icon: FaAws,
     category: 'cloud',
     aliases: ['amazon']
   },
   {
-    name: 'gcp',
+    skill: 'gcp',
+    title: 'Google Cloud',
     icon: SiGooglecloud,
     category: 'cloud',
     aliases: ['google-cloud']
   },
   {
-    name: 'azure',
+    skill: 'azure',
+    title: 'Azure',
     icon: TbBrandAzure,
     category: 'cloud',
     aliases: ['microsoft-azure']
   },
   {
-    name: 'docker',
+    skill: 'docker',
+    title: 'Docker',
     icon: SiDocker,
     category: 'tool',
     aliases: ['container']
   },
   {
-    name: 'kubernetes',
+    skill: 'kubernetes',
+    title: 'Kubernetes',
     icon: SiKubernetes,
     category: 'tool',
     aliases: ['k8s']
@@ -282,19 +323,22 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Testing
   {
-    name: 'jest',
+    skill: 'jest',
+    title: 'Jest',
     icon: SiJest,
     category: 'tool',
     aliases: ['testing']
   },
   {
-    name: 'cypress',
+    skill: 'cypress',
+    title: 'Cypress',
     icon: SiCypress,
     category: 'tool',
     aliases: ['e2e']
   },
   {
-    name: 'selenium',
+    skill: 'selenium',
+    title: 'Selenium',
     icon: SiSelenium,
     category: 'tool',
     aliases: ['webdriver']
@@ -302,19 +346,22 @@ export const iconMappings: SkillIconMapping[] = [
 
   // CI/CD
   {
-    name: 'jenkins',
+    skill: 'jenkins',
+    title: 'Jenkins',
     icon: SiJenkins,
     category: 'tool',
     aliases: ['ci']
   },
   {
-    name: 'circleci',
+    skill: 'circleci',
+    title: 'CircleCI',
     icon: SiCircleci,
     category: 'tool',
     aliases: ['ci']
   },
   {
-    name: 'travis',
+    skill: 'travis',
+    title: 'Travis CI',
     icon: SiTravisci,
     category: 'tool',
     aliases: ['ci']
@@ -322,13 +369,15 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Version Control
   {
-    name: 'git',
+    skill: 'git',
+    title: 'Git',
     icon: SiGit,
     category: 'tool',
     aliases: ['vcs']
   },
   {
-    name: 'github',
+    skill: 'github',
+    title: 'GitHub',
     icon: SiGithub,
     category: 'platform',
     aliases: []
@@ -336,13 +385,15 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Styling
   {
-    name: 'tailwind',
+    skill: 'tailwind',
+    title: 'Tailwind CSS',
     icon: SiTailwindcss,
     category: 'framework',
     aliases: ['tailwindcss']
   },
   {
-    name: 'sass',
+    skill: 'sass',
+    title: 'Sass',
     icon: SiSass,
     category: 'tool',
     aliases: ['scss']
@@ -350,19 +401,22 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Frontend Technologies
   {
-    name: 'html',
+    skill: 'html',
+    title: 'HTML',
     icon: DiHtml5,
     category: 'programming',
     aliases: ['html5', 'markup']
   },
   {
-    name: 'css',
+    skill: 'css',
+    title: 'CSS',
     icon: DiCss3,
     category: 'programming',
     aliases: ['css3', 'styles']
   },
   {
-    name: 'flutter',
+    skill: 'flutter',
+    title: 'Flutter',
     icon: SiFlutter,
     category: 'framework',
     aliases: ['flutter-framework', 'mobile']
@@ -370,7 +424,8 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Infrastructure & Tools
   {
-    name: 'nginx',
+    skill: 'nginx',
+    title: 'Nginx',
     icon: DiNginx,
     category: 'tool',
     aliases: ['web-server', 'proxy', 'load-balancer']
@@ -378,78 +433,89 @@ export const iconMappings: SkillIconMapping[] = [
 
   // Alternative DevIcon versions
   {
-    name: 'git1',
+    skill: 'git1',
+    title: 'Git',
     icon: DiGit,
     category: 'tool',
     aliases: ['vcs-alt']
   },
   {
-    name: 'docker1',
+    skill: 'docker1',
+    title: 'Docker',
     icon: DiDocker,
     category: 'tool',
     aliases: ['container-alt']
   },
   {
-    name: 'javascript1',
+    skill: 'javascript1',
+    title: 'JavaScript',
     icon: DiJavascript,
     category: 'programming',
     aliases: ['js-alt', 'ecmascript-alt']
   },
   {
-    name: 'python1',
+    skill: 'python1',
+    title: 'Python',
     icon: DiPython,
     category: 'programming',
     aliases: ['py-alt']
   },
   {
-    name: 'java1',
+    skill: 'java1',
+    title: 'Java',
     icon: DiJava,
     category: 'programming',
     aliases: ['jvm-alt']
   },
   {
-    name: 'rust1',
+    skill: 'rust1',
+    title: 'Rust',
     icon: DiRust,
     category: 'programming',
     aliases: ['rs-alt']
   },
   {
-    name: 'postgresql1',
+    skill: 'postgresql1',
+    title: 'PostgreSQL',
     icon: DiPostgresql,
     category: 'database',
     aliases: ['postgres-alt']
   },
   {
-    name: 'mysql1',
+    skill: 'mysql1',
+    title: 'MySQL',
     icon: DiMysql,
     category: 'database',
     aliases: ['mysql-alt']
   },
   {
-    name: 'mongodb1',
+    skill: 'mongodb1',
+    title: 'MongoDB',
     icon: DiMongodb,
     category: 'database',
     aliases: ['mongo-alt']
   },
   {
-    name: 'redis1',
+    skill: 'redis1',
+    title: 'Redis',
     icon: DiRedis,
     category: 'database',
     aliases: ['cache-alt']
   },
   {
-    name: 'sass1',
+    skill: 'sass1',
+    title: 'Sass',
     icon: DiSass,
     category: 'tool',
     aliases: ['scss-alt']
   }
 ];
 
-export const getIconByName = (name: string): SkillIconMapping | undefined => {
-  const normalizedName = name.toLowerCase();
+export const getIconBySkill = (skill: string): SkillIconMapping | undefined => {
+  const normalizedSkill = skill.toLowerCase();
   return iconMappings.find(
     mapping => 
-      mapping.name === normalizedName || 
-      mapping.aliases?.includes(normalizedName)
+      mapping.skill === normalizedSkill || 
+      mapping.aliases?.includes(normalizedSkill)
   );
 };

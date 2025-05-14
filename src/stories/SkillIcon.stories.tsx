@@ -11,9 +11,9 @@ const meta: Meta<typeof SkillIcon> = {
   },
   tags: ['autodocs'],
   argTypes: {
-    name: {
+    skill: {
       control: 'select',
-      options: iconMappings.map((icon) => icon.name),
+      options: iconMappings.map((icon) => icon.skill),
     },
     size: { control: 'number' },
     color: { control: 'color' },
@@ -47,7 +47,7 @@ type Story = StoryObj<typeof SkillIcon>;
 // Base story with default props
 export const Default: Story = {
   args: {
-    name: "react",
+    skill: "react",
     size: 32,
     showLabel: true
   }
@@ -57,10 +57,10 @@ export const Default: Story = {
 export const Sizes: Story = {
   render: () => (
     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-      <SkillIcon name="react" size={16} />
-      <SkillIcon name="react" size={24} />
-      <SkillIcon name="react" size={32} />
-      <SkillIcon name="react" size={48} />
+      <SkillIcon skill="react" size={16} />
+      <SkillIcon skill="react" size={24} />
+      <SkillIcon skill="react" size={32} />
+      <SkillIcon skill="react" size={48} />
     </div>
   ),
 };
@@ -68,29 +68,25 @@ export const Sizes: Story = {
 // Story showcasing different colors
 export const Colors: Story = {
   args: {
-    name: "rust",
+    skill: "rust",
     size: 22,
     color: "blue"
   },
 
   render: () => (
     <div style={{ display: 'flex', gap: '1rem' }}>
-      <SkillIcon name="react" color="#61DAFB" />
-      <SkillIcon name="react" color="#FF4785" />
-      <SkillIcon name="react" color="#1EA7FD" />
+      <SkillIcon skill="react" color="#61DAFB" />
+      <SkillIcon skill="react" color="#FF4785" />
+      <SkillIcon skill="react" color="#1EA7FD" />
     </div>
   )
 };
 
 // Grid of all available icons
 export const AllIcons: Story = {
-  args: {
-    name: "postgresql"
-  },
-    parameters: {
+  parameters: {
     controls: { hideNoControlsWarning: true, disable: true },
   },
-
   render: () => (
     <div style={{ 
       display: 'grid', 
@@ -102,7 +98,7 @@ export const AllIcons: Story = {
     }}>
       {iconMappings.map((icon) => (
         <div
-          key={icon.name}
+          key={icon.skill}
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -113,7 +109,7 @@ export const AllIcons: Story = {
             backgroundColor: '#fff',
           }}
         >
-          <SkillIcon name={icon.name} size={32} />
+          <SkillIcon skill={icon.skill} size={32} />
         </div>
       ))}
     </div>
@@ -123,7 +119,7 @@ export const AllIcons: Story = {
 // Story showcasing custom label
 export const WithCustomLabel: Story = {
   args: {
-    name: "typescript",
+    skill: "typescript",
     size: 32,
     showLabel: true,
     customLabel: "TypeScript Language",
