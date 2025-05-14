@@ -8,6 +8,7 @@ export interface SkillIconProps {
   color?: string;
   customIcon?: IconType;
   className?: string;
+  customLabel?: string;
   showLabel?: boolean;
   labelClassName?: string;
   textSize?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
@@ -21,6 +22,7 @@ export const SkillIcon: React.FC<SkillIconProps> = ({
   className,
   showLabel = true,
   labelClassName = '',
+  customLabel= '',
   textSize = 'xs',
 }) => {
   const mapping = getIconByName(name);
@@ -39,7 +41,7 @@ export const SkillIcon: React.FC<SkillIconProps> = ({
       <Icon size={size} color={color} />
       {showLabel && (
         <span className={`mt-2 text-${textSize} ${labelClassName}`}>
-          {name}
+          {customLabel || name}
         </span>
       )}
     </div>

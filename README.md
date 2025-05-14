@@ -22,7 +22,6 @@ npm install react-skills-icons
 
 ```jsx
 import { SkillIcon } from 'react-skills-icons';
-import { FaCode } from 'react-icons/fa';
 
 // Basic usage
 <SkillIcon name="react" />
@@ -37,12 +36,18 @@ import { FaCode } from 'react-icons/fa';
 ```bash
 npm install react-icons
 ```
+
+```jsx
 import { FaCode } from 'react-icons/fa';
 <SkillIcon name="custom" customIcon={FaCode} />
+```
 
+```jsx
 // With label
 <SkillIcon name="python" showLabel={true} />
+```
 
+```jsx
 // With custom label styling
 <SkillIcon 
   name="nodejs" 

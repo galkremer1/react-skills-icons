@@ -18,6 +18,7 @@ const meta: Meta<typeof SkillIcon> = {
     size: { control: 'number' },
     color: { control: 'color' },
     showLabel: { control: 'boolean' },
+    customLabel: { control: 'text' },
     labelClassName: {
       table: {
         disable: true
@@ -46,9 +47,10 @@ type Story = StoryObj<typeof SkillIcon>;
 // Base story with default props
 export const Default: Story = {
   args: {
-    name: 'react',
-    size: 24,
-  },
+    name: "react",
+    size: 32,
+    showLabel: true
+  }
 };
 
 // Story showcasing different sizes
@@ -116,4 +118,15 @@ export const AllIcons: Story = {
       ))}
     </div>
   )
+};
+
+// Story showcasing custom label
+export const WithCustomLabel: Story = {
+  args: {
+    name: "typescript",
+    size: 32,
+    showLabel: true,
+    customLabel: "TypeScript Language",
+    textSize: "lg"
+  }
 };

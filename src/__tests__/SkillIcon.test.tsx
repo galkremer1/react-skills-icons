@@ -56,4 +56,24 @@ describe('SkillIcon', () => {
     const label = screen.getByText(TEST_ICON_NAME);
     expect(label).toHaveClass('text-2xl');
   });
+
+  it('displays custom label when provided', () => {
+    const customLabel = 'Custom JavaScript';
+    render(<SkillIcon name={TEST_ICON_NAME} customLabel={customLabel} showLabel={true} />);
+    const label = screen.getByText(customLabel);
+    expect(label).toBeInTheDocument();
+  });
+
+  it('prefers custom label over default name', () => {
+    const customLabel = 'Custom Label';
+    render(<SkillIcon name={TEST_ICON_NAME} customLabel={customLabel} showLabel={true} />);
+    expect(screen.queryByText(TEST_ICON_NAME)).not.toBeInTheDocument();
+    expect(screen.getByText(customLabel)).toBeInTheDocument();
+  });
+
+  it('ignores custom label when showLabel is false', () => {
+    const customLabel = 'Custom Label';
+    render(<SkillIcon name={TEST_ICON_NAME} customLabel={customLabel} showLabel={false} />);
+    expect(screen.queryByText(customLabel)).not.toBeInTheDocument();
+  });
 });
