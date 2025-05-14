@@ -1,54 +1,55 @@
-import { readFileSync } from 'fs';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
+import postcss from 'rollup-plugin-postcss';
+import { readFileSync } from 'fs';
 
-const packageJson = JSON.parse(readFileSync('./package.json'));
+// Import package.json without using assert
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
 
 export default [
+  // Main bundle
   {
     input: 'src/index.ts',
     output: [
       {
-        file: packageJson.main,
-        format: 'cjs',
+        file: pkg.main,
+        format: 'es',
         sourcemap: true,
       },
       {
-        file: packageJson.module,
+        file: pkg.module,
         format: 'esm',
         sourcemap: true,
-      },
+      }
+    ],
+    external: [
+      ...Object.keys(pkg.peerDependencies || {}), 
+      'react/jsx-runtime'
     ],
     plugins: [
       resolve(),
       commonjs(),
-      typescript({
+      typescript({ 
         tsconfig: './tsconfig.json',
-        exclude: ['**/__tests__/**', '**/*.test.ts', '**/*.test.tsx'],
+        exclude: ["**/__tests__", "**/*.test.ts", "**/*.test.tsx"],
+        declaration: false // Let the separate declaration build handle this
       }),
       postcss({
-        config: true,
         extensions: ['.css'],
         minimize: true,
         inject: {
           insertAt: 'top',
         },
-        extract: false,
-      }),
-    ],
-    external: ['react', 'react-dom', 'react-icons'],
+      })
+    ]
   },
+  // Type definitions bundle
   {
     input: 'src/index.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    plugins: [
-      dts({
-        respectExternal: true,
-        exclude: ['**/*.css', 'src/styles/**/*'],
-      }),
-    ],
-  },
+    output: [{ file: pkg.types, format: 'es' }],
+    plugins: [dts()],
+    external: [/\.css$/]
+  }
 ];
