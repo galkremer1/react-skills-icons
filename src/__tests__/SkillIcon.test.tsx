@@ -7,6 +7,8 @@ import { FaCode } from 'react-icons/fa';
 const ICON_SKILL = 'JavaScript';
 const ICON_SKILL_TEST_ID = ICON_SKILL.toLowerCase();
 
+// For now I am ignoring the skill type check
+
 describe('SkillIcon', () => {
   it('renders with default icon', () => {
     render(<SkillIcon skill={ICON_SKILL} />);

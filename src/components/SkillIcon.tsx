@@ -7,7 +7,7 @@ export const TEXT_SIZES = ['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', 
 export type TextSize = typeof TEXT_SIZES[number];
 
 export interface SkillIconProps {
-  skill: SkillName | string;  // Support both specific skills and string for backward compatibility
+  skill: SkillName;  // Support both specific skills and string for backward compatibility
   size?: number;
   color?: string;
   customIcon?: IconType;

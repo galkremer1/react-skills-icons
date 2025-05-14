@@ -236,12 +236,9 @@ export {
     DiCss3Full, DiBower, DiBrackets, DiBlackberry
 };
 
-export type {
-        IconType
-    };
 
 // Create a union type of all available skills
-export type SkillName = 
+type SkillName = 
   | 'javascript' | 'typescript' | 'javascript1' | 'javascript-badge'
   | 'python' | 'python1'
   | 'java' | 'java1' | 'kotlin' | 'scala' | 'scala1' | 'groovy' | 'groovy1'
@@ -293,3 +290,9 @@ export type SkillName =
   | 'html5-3d' | 'html5-connectivity' | 'html5-device' | 'html5-multimedia'
   | 'yii' | 'meteor' | 'requirejs' | 'krakenjs'
   | 'terminal';
+  
+// Export types section at the bottom of the file - make this more explicit
+export type {
+  IconType,
+  SkillName  // Add this line to explicitly export SkillName
+};
