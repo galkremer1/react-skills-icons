@@ -13,18 +13,31 @@ const meta: Meta<typeof SkillIcon> = {
   argTypes: {
     name: {
       control: 'select',
-      options: iconMappings.map(icon => icon.name),
-      description: 'The name of the icon to display',
+      options: iconMappings.map((icon) => icon.name),
     },
-    size: {
-      control: { type: 'number', min: 16, max: 128, step: 8 },
-      description: 'Size of the icon in pixels',
+    size: { control: 'number' },
+    color: { control: 'color' },
+    showLabel: { control: 'boolean' },
+    labelClassName: {
+      table: {
+        disable: true
+      }
     },
-    color: {
-      control: 'color',
-      description: 'Color of the icon',
+    textSize: {
+      control: 'select',
+      options: ['xs', 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl']
     },
-  },
+    className: {
+      table: {
+        disable: true
+      }
+    },
+    customIcon: {
+      table: {
+        disable: true
+      }
+    }
+  }
 };
 
 export default meta;

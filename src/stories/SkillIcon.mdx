@@ -1,77 +1,46 @@
-import { Meta, Story, Canvas } from '@storybook/blocks';
-import * as SkillIconStories from './SkillIcon.stories';
+import { Meta, Story, Canvas, Controls } from '@storybook/blocks';
+import { SkillIcon } from '../components/SkillIcon';
+import * as SkillIconStories from './SkillIcon.stories.tsx';
 
 <Meta of={SkillIconStories} />
 
-import { SkillIcon } from '../components/SkillIcon';
-import { iconMappings } from '../constants/iconMappings';
-
-
-
 # SkillIcon Component
 
-A flexible icon component for displaying programming and technology skills.
+A flexible React component for displaying programming and technology skill icons.
 
-## Features
-
-*   100+ technology and skill icons
-*   Customizable size and colors
-*   Optional labels
-*   TypeScript support
-
-## Basic Usage
+## Usage
 
 <Canvas>
-<Story name="Basic">
-<div className="flex gap-4">
-<SkillIcon name="react" />
-<SkillIcon name="typescript" />
-<SkillIcon name="javascript" />
-</div>
-</Story>
+  <Story of={SkillIconStories.Default} />
 </Canvas>
+
+<Controls />
 
 ## Size Variations
 
+Different sizes can be applied using the `size` prop:
+
 <Canvas>
-<Story name="Sizes">
-<div className="flex items-center gap-4">
-<SkillIcon name="react" size={16} />
-<SkillIcon name="react" size={24} />
-<SkillIcon name="react" size={32} />
-<SkillIcon name="react" size={48} />
-</div>
-</Story>
+  <Story of={SkillIconStories.Sizes} />
 </Canvas>
 
 ## Color Customization
 
-<Canvas>
-<Story name="Colors">
-<div className="flex gap-4">
-<SkillIcon name="react" color="#61DAFB" />
-<SkillIcon name="react" color="#0284c7" />
-<SkillIcon name="react" color="#404040" />
-</div>
-</Story>
-</Canvas>
-
-## All Available Icons
+Icons can be customized with different colors:
 
 <Canvas>
-<Story name="Icon Gallery">
-<div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: '16px' }}>
-{iconMappings.map((icon) => (
-<div key={icon.name} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '8px', border: '1px solid #ddd', borderRadius: '4px' }}>
-<SkillIcon name={icon.name} size={32} />
-<span style={{ marginTop: '4px', fontSize: '0.75rem' }}>{icon.name}</span>
-</div>
-))}
-</div>
-</Story>
+  <Story of={SkillIconStories.Colors} />
 </Canvas>
 
-The `SkillIcon` component accepts the following props:
+## Available Icons
+
+Here's a gallery of all available icons:
+
+<Canvas>
+  <Story of={SkillIconStories.AllIcons} />
+</Canvas>
+
+## Props
 
 | Prop | Type | Default | Description |
 |:-----|:-----|:--------|:------------|
